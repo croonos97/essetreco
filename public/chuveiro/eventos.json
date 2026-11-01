@@ -1,0 +1,187 @@
+[
+ {
+  "kind": "whoosh",
+  "t": 3.236,
+  "lead": -0.25,
+  "gain": 0.8
+ },
+ {
+  "kind": "whoosh",
+  "t": 6.14,
+  "lead": -0.25,
+  "gain": 0.8
+ },
+ {
+  "kind": "whoosh",
+  "t": 11.714,
+  "lead": -0.25,
+  "gain": 0.8
+ },
+ {
+  "kind": "whoosh",
+  "t": 49.073,
+  "lead": -0.25,
+  "gain": 0.8
+ },
+ {
+  "kind": "whoosh",
+  "t": 65.193,
+  "lead": -0.25,
+  "gain": 0.8
+ },
+ {
+  "kind": "whoosh",
+  "t": 70.566,
+  "lead": -0.25,
+  "gain": 0.8
+ },
+ {
+  "kind": "whoosh",
+  "t": 90.981,
+  "lead": -0.25,
+  "gain": 0.8
+ },
+ {
+  "kind": "whoosh",
+  "t": 98.989,
+  "lead": -0.25,
+  "gain": 0.8
+ },
+ {
+  "kind": "whoosh",
+  "t": 105.576,
+  "lead": -0.25,
+  "gain": 0.8
+ },
+ {
+  "kind": "pop",
+  "t": 3.236,
+  "lead": 0.02,
+  "gain": 0.7
+ },
+ {
+  "kind": "pop",
+  "t": 6.14,
+  "lead": 0.02,
+  "gain": 0.7
+ },
+ {
+  "kind": "pop",
+  "t": 11.714,
+  "lead": 0.02,
+  "gain": 0.7
+ },
+ {
+  "kind": "pop",
+  "t": 27.632,
+  "lead": 0.02,
+  "gain": 0.7
+ },
+ {
+  "kind": "pop",
+  "t": 49.073,
+  "lead": 0.02,
+  "gain": 0.7
+ },
+ {
+  "kind": "pop",
+  "t": 70.566,
+  "lead": 0.02,
+  "gain": 0.7
+ },
+ {
+  "kind": "pop",
+  "t": 90.981,
+  "lead": 0.02,
+  "gain": 0.7
+ },
+ {
+  "kind": "pop",
+  "t": 98.989,
+  "lead": 0.02,
+  "gain": 0.7
+ },
+ {
+  "kind": "pop",
+  "t": 105.576,
+  "lead": 0.02,
+  "gain": 0.7
+ },
+ {
+  "kind": "shiver",
+  "t": 0.1,
+  "gain": 0.8
+ },
+ {
+  "kind": "crackle",
+  "t": 0.82,
+  "gain": 0.6
+ },
+ {
+  "kind": "crackle",
+  "t": 19.214,
+  "gain": 0.5
+ },
+ {
+  "kind": "pop",
+  "t": 51.753,
+  "gain": 0.6
+ },
+ {
+  "kind": "pop",
+  "t": 54.793,
+  "gain": 0.6
+ },
+ {
+  "kind": "riser",
+  "t": 83.446,
+  "lead": -1.2,
+  "gain": 0.6
+ },
+ {
+  "kind": "snap",
+  "t": 83.446,
+  "gain": 1.0
+ },
+ {
+  "kind": "crackle",
+  "t": 83.446,
+  "gain": 0.8
+ },
+ {
+  "kind": "x",
+  "t": 85.106,
+  "gain": 0.8
+ },
+ {
+  "kind": "crackle",
+  "t": 86.346,
+  "gain": 0.8
+ },
+ {
+  "kind": "ok",
+  "t": 98.261,
+  "gain": 0.9
+ },
+ {
+  "kind": "ok",
+  "t": 104.529,
+  "gain": 0.9
+ },
+ {
+  "kind": "riser",
+  "t": 112.873,
+  "lead": -1.1,
+  "gain": 0.5
+ },
+ {
+  "kind": "pop",
+  "t": 112.873,
+  "gain": 0.8
+ },
+ {
+  "kind": "pop",
+  "t": 113.07300000000001,
+  "gain": 0.8
+ }
+]
