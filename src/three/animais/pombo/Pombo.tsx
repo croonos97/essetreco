@@ -95,10 +95,11 @@ export function Pombo({ t, position = [0, 0, 0], rotation = [0, 0, 0], scale = 1
         const a = (i - 5.5) * 0.034;
         return feather(`tail${i}`, [a * 0.45, 0.331 + Math.abs(a) * 0.08, -0.20], [0.024, 0.031, 0.225 - Math.abs(a) * 0.19], [-0.12, -a * 0.8, 0], m.tail);
       })}
-      {[-1, 1].map(side => <group key={side} position={[side * 0.109, 0.365, 0.082]} scale={[side, 1, 1]} rotation={[0, -side * f * 0.2, side * f * (0.22 + Math.sin(t * 17) * 0.82)]}>
+      {[-1, 1].map(side => <group key={side} position={[side * 0.109, 0.365, 0.082]} scale={[side, 1, 1]} rotation={[0, -side * f * 0.2, side * f * (0.08 + Math.sin(t * 17) * 0.40)]}>
         {ellipsoid("wing", [0.021 + f * 0.035, 0, -0.085], baby ? [0.038, 0.059, 0.095] : [0.049, 0.092, 0.19], m.wing)}
         {!baby && <>
-          {Array.from({ length: 10 }, (_, i) => feather(`primary${i}`, [0.056 + f * i * 0.019, -0.050 + i * 0.008, -0.12 - i * 0.004], [0.016, 0.025, 0.215 - i * 0.006 + f * 0.17], [0, -0.10 - f * (0.30 + i * 0.075), -Math.PI / 2], i < 3 ? m.tail : m.covert))}
+          {Array.from({ length: 10 }, (_, i) => feather(`primary${i}`, [0.056 + f * i * 0.019, -0.050 + i * 0.008, -0.12 - i * 0.004], [0.016 + f * 0.007, 0.025, 0.215 - i * 0.006 + f * 0.17], [0, -0.10 - f * (0.30 + i * 0.075), -(1 - f) * Math.PI / 2], i < 3 ? m.tail : m.covert))}
+          {f > 0 && Array.from({ length: 7 }, (_, i) => feather(`flight-secondary${i}`, [0.055 + f * i * 0.018, 0.006, -0.010 - i * 0.019], [0.025 * f, 0.018, 0.17 + f * 0.05], [0, -0.45 - f * i * 0.065, -(1 - f) * Math.PI / 2], m.covert))}
           {Array.from({ length: 30 }, (_, i) => {
             const row = Math.floor(i / 6), col = i % 6;
             const y = -0.048 + row * 0.023, z = 0.027 - col * 0.036;
@@ -157,7 +158,7 @@ export function Pombo({ t, position = [0, 0, 0], rotation = [0, 0, 0], scale = 1
       const step = Math.sin(phase + (side < 0 ? Math.PI : 0)) * w;
       const lift = Math.max(0, step) * 0.042;
       const ankle: V3 = [side * 0.061, 0.035 + lift, step * 0.044];
-      return <group key={`leg${side}`}>
+      return <group key={`leg${side}`} position={[0, f * 0.145, -f * 0.035]} rotation={[-f * 0.8, 0, 0]}>
         {ellipsoid("thigh", [side * 0.061, 0.171 + bob, -0.012], [0.033, 0.067, 0.039], m.body, [-0.3, 0, 0])}
         <Rod a={[side * 0.061, 0.160 + bob, 0.005]} b={[side * 0.061, 0.088 + lift * 0.5, -0.058]} radius={0.012} material={m.skin} />
         <Rod a={[side * 0.061, 0.088 + lift * 0.5, -0.058]} b={ankle} radius={0.009} material={m.skin} />

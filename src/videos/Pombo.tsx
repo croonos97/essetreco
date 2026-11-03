@@ -81,7 +81,7 @@ function Predador({t}: {t: number}) {
 function Desvio({t, k}: {t: number; k: number}) {
   const bank = Math.sin(k * PI);
   return <>
-    <Pombo t={t} position={[mix(-.4, .45, k), .23 + bank * .32, .1 + .2 * k]} rotation={[-.18, mix(.2, 1.5, k), -.6 * bank]} flap={1}/>
+    <Pombo t={t} position={[mix(-.4, .45, k), .23 + bank * .32, .1 + .2 * k]} rotation={[.68, mix(.2, 1.5, k), -.6 * bank]} flap={1}/>
     <Falco t={t} position={[mix(-.7, .7, k), mix(.8, .12, k), mix(-.8, -.2, k)]} rotation={[.1, .9, .25]} scale={.63} flap={.12}/>
   </>;
 }
@@ -141,7 +141,7 @@ shot('24-jovem-emplumado', T_PENA, S('rancor'), 'ninho', [-1.5, .64, 1.65], [.12
 shot('25-pessoa-a-enxota', S('rancor'), T_RECON, 'praca', [2.5, 1.2, 3], [.05, .72, -.15], t => <Reconhecimento t={t} stage="shoo" k={p(t, w('rancor', 'enxota'), T_RECON)}/>);
 shot('26-pessoa-b-neutra', T_RECON, T_ROUPA, 'praca', [-2.4, 1.1, 3.1], [.2, .74, -.2], t => <Reconhecimento t={t} stage="neutral" k={0}/>);
 shot('27-a-troca-casaco', T_ROUPA, T_CONTINUA, 'praca', [1.2, 1.22, 2.6], [-.4, 1, -.6], t => <Reconhecimento t={t} stage="change" k={p(t, T_ROUPA, T_CONTINUA)}/>);
-shot('28-pombo-evita-a', T_CONTINUA, T_PESSOA, 'praca', [1.7, .85, 2.1], [.2, .49, .1], t => <Reconhecimento t={t} stage="avoid" k={p(t, T_CONTINUA, T_PESSOA)}/>);
+shot('28-pombo-evita-a', T_CONTINUA, T_PESSOA, 'praca', [2.25, 1.25, 3.15], [.05, .76, -.25], t => <Reconhecimento t={t} stage="avoid" k={p(t, T_CONTINUA, T_PESSOA)}/>);
 shot('29-a-parado-pombo-esquiva', T_PESSOA, S('humanos'), 'praca', [-2.15, 1.15, 2.9], [.2, .73, -.1], t => <Reconhecimento t={t} stage="avoid" k={p(t, T_PESSOA, w('rancor', 'rancor'))}/>);
 shot('30-rato-com-asa', S('humanos'), T_GENTE, 'praca', [1.18, .6, 1.6], [-.12, .28, .1], t => <><Pombo t={t} position={[.2, 0, .05]} rotation={[0, -.25, 0]} head={[0, -.5, 0]}/><Rato t={t}/></>);
 shot('31-trazido-por-gente', T_GENTE, T_CASA, 'porto', [2.9, 1.7, 3.4], [0, .9, -.15], t => <Transporte t={t} k={p(t, T_GENTE, T_CASA)}/>, [2.75, 1.66, 3.3], undefined, 40, 'VINHETA HISTÓRICA ILUSTRATIVA');
@@ -199,4 +199,11 @@ export function PomboVideo({cover = false}: {cover?: boolean}) {
     </>}
   </AbsoluteFill>;
 }
-export const CapaPombo = () => <PomboVideo cover/>;
+export const CapaPombo = () => <AbsoluteFill>
+  <PomboVideo cover/>
+  <div style={{position: 'absolute', top: 280, left: 64, right: 64, textAlign: 'center', fontFamily: FONT_KIT, fontWeight: 900, lineHeight: 1, WebkitTextStroke: '12px #172126', paintOrder: 'stroke fill', textShadow: '0 9px 20px #0009'}}>
+    <div style={{fontSize: 86, color: '#fff'}}>VOCÊ BEBE</div>
+    <div style={{fontSize: 112, color: '#FFD21F', marginTop: 14}}>LEITE DE</div>
+    <div style={{fontSize: 148, color: '#FFD21F'}}>MACHO</div>
+  </div>
+</AbsoluteFill>;
