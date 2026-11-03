@@ -129,7 +129,7 @@ shot('12-pai-deixa-ninho', T_SAI, T_PRACA, 'ninho', [1.5, .9, 1.9], [.1, .4, .2]
 shot('13-bica-na-praca', T_PRACA, T_CITY, 'praca', [1, .62, 1.4], [0, .28, .05], t => <Praca t={t}/>);
 shot('14-sombra-peregrino', T_CITY, T_FALCO, 'praca', [.65, 1.25, 1.15], [0, .13, .1], t => <Praca t={t} shadow/>, [.61, 1.22, 1.12]);
 shot('15-peregrino-entre-predios', T_FALCO, T_DESVIA, 'telhado', [2.45, 1.05, 2.6], [0, .65, -.05], t => <Predador t={t}/>, [2.28, 1.03, 2.55]);
-shot('16-decola-desvia', T_DESVIA, T_VOLTA, 'praca', [1.5, .85, 1.7], [0, .55, .05], t => <Desvio t={t} k={p(t, T_DESVIA, T_VOLTA)}/>, [1.6, 1.05, 1.8], [.2, .7, .1]);
+shot('16-decola-desvia', T_DESVIA, T_VOLTA, 'praca', [2.5, 1.6, 3.6], [0, .65, .05], t => <Desvio t={t} k={p(t, T_DESVIA, T_VOLTA)}/>, [2.7, 1.8, 3.4], [.2, .7, .1]);
 shot('17-retorna-ao-filho', T_VOLTA, T_BOCA, 'ninho', [-1.4, .8, 1.7], [-.1, .4, .05], t => <Retorno t={t}/>);
 shot('18-boca-motoboy', T_BOCA, S('crescimento'), 'ninho', C1, L0, FEED);
 shot('19-quatro-semanas', S('crescimento'), T_HUMAN, 'ninho', [1.5, .8, 1.7], [0, .35, .05], grow, [1.42, .77, 1.65]);
@@ -189,7 +189,7 @@ export function PomboVideo({cover = false}: {cover?: boolean}) {
       {is(S('crescimento'), T_HUMAN) && <><Top>CERCA DE 4 SEMANAS</Top><Top small y={340}>QUASE DO TAMANHO ADULTO</Top><Top small y={1530}>DIA {Math.round(mix(1, 28, p(t, S('crescimento'), T_HUMAN)))}</Top></>}
       {is(T_HUMAN, T_ESTIRAO) && <Top small>COMPARAÇÃO DE TAMANHO · APROXIMADA</Top>}
       {is(T_PENA, w('anonimo', 'modo')) && <Top small>JOVEM EMPLUMADO · QUASE DO TAMANHO ADULTO</Top>}
-      {is(S('rancor'), w('rancor', 'rancor')) && <Top small>RESUMO DE EXPERIMENTO</Top>}
+      {is(S('rancor'), w('rancor', 'rancor')) && <Top small y={145}>RESUMO DE EXPERIMENTO</Top>}
       <ApelidoAmarelo de={w('papo', 'requeijão')} ate={Math.min(w('papo', 'requeijão') + 1.3, S('falcao'))} texto="REQUEIJÃO" y={240} tamanho={84}/>
       <ApelidoAmarelo de={w('falcao', 'motoboy')} ate={Math.min(w('falcao', 'motoboy') + 1.3, S('crescimento'))} texto="MOTOBOY" y={240} tamanho={88}/>
       <ApelidoAmarelo de={T_ESTIRAO} ate={Math.min(T_ESTIRAO + 1.3, S('anonimo'))} texto="ESTIRÃO" y={240} tamanho={88}/>
