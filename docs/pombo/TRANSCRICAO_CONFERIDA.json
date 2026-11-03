@@ -1,0 +1,56 @@
+[
+  {
+    "id": "gancho",
+    "expected": "Você bebe leite de macho.",
+    "heard": "Você bebe leite de macho.",
+    "similarity": 1.0
+  },
+  {
+    "id": "identidade",
+    "expected": "Você é um filhote de pombo. E esse leite sai do papo do seu pai.",
+    "heard": "Você é um filhote de pombo e esse leite sai do papo do seu pai.",
+    "similarity": 1.0
+  },
+  {
+    "id": "papo",
+    "expected": "Como assim, de macho? Seu pai faz igual sua mãe, com o mesmo tipo de hormônio envolvido no leite materno. A camada interna do papo engrossa e se enche de células nutritivas. Aí essa camada descasca e vira pasta. Esse é seu requeijão.",
+    "heard": "Como assim de macho? Seu pai faz igual sua mãe, com o mesmo tipo de hormônio envolvido no leite materno. A camada interna do papo engrossa e se enche de células nutritivas. Aí essa camada descasca e vira pasta. Esse é seu requeijão.",
+    "similarity": 1.0
+  },
+  {
+    "id": "falcao",
+    "expected": "Fazer leite dá uma fome danada. Por isso seu pai sai pra comer na praça. E na cidade tem falcão-peregrino, que caça pombo até no centro. Seu pai desvia, volta e te serve na boca. Esse é seu motoboy.",
+    "heard": "fazer leite dá uma fome danada. Por isso seu pai sai pra comer na praça. E na cidade tem falcão peregrino, que caça pombo até no centro. Seu pai desvia, volta e te serve na boca. Esse é seu motoboy.",
+    "similarity": 0.997
+  },
+  {
+    "id": "crescimento",
+    "expected": "Em quatro semanas, você fica do tamanho dele. Um humano leva uns dezoito anos pra isso. Esse é seu estirão.",
+    "heard": "Em quatro semanas, você fica do tamanho dele. Um humano leva uns 18 anos para isso. Esse é seu estirão.",
+    "similarity": 0.95
+  },
+  {
+    "id": "anonimo",
+    "expected": "Já viu filhote de pombo? Quase ninguém viu. Porque você só sai do ninho já com pena e tamanho de adulto. Esse é seu modo anônimo.",
+    "heard": "Já viu filhote de pombo? Quase ninguém viu, porque você só sai do ninho já com pena e tamanho de adulto. Esse é seu modo anônimo.",
+    "similarity": 1.0
+  },
+  {
+    "id": "rancor",
+    "expected": "Quem te enxota fica marcado. Pombo de rua reconhece quem correu atrás dele, mesmo de roupa trocada. E continua fugindo, mesmo quando a pessoa não enxota mais. Esse é seu rancor.",
+    "heard": "Quem te enxota fica marcado. Pombo de rua reconhece quem correu atrás dele, mesmo de roupa trocada. E continua fugindo, mesmo quando a pessoa não enxota mais. Esse é seu rancor.",
+    "similarity": 1.0
+  },
+  {
+    "id": "humanos",
+    "expected": "Aí te chamam de rato com asa. Só que foi gente que te trouxe pro Brasil, pra criar em casa. E quem te joga pipoca na praça também é gente.",
+    "heard": "Aí te chamam de rato com asa. Só que foi gente que te trouxe pro Brasil pra criar em casa. E quem te joga pipoca na praça, também é gente.",
+    "similarity": 1.0
+  },
+  {
+    "id": "recap",
+    "expected": "Seu pai te deu leite, driblou um falcão pra voltar, e você cresceu escondido no ninho. Depois, aprendeu a reconhecer quem te enxota. Você bebe leite de macho.",
+    "heard": "Seu pai te deu leite, driblou um falcão pra voltar, e você cresceu escondido no ninho. Depois, aprendeu a reconhecer quem te enxota. Você bebe leite de macho.",
+    "similarity": 1.0
+  }
+]

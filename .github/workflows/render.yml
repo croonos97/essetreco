@@ -96,7 +96,10 @@ jobs:
           sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg > /dev/null
           ls out/chunks/*.mp4 | sort | sed "s|^|file '$PWD/|;s|$|'|" > list.txt
           ffmpeg -v error -y -f concat -safe 0 -i list.txt -c copy out/video.mp4
-          if [ -f "public/$NAME/narracao.wav" ]; then
+          if [ -f "public/$NAME/mix.wav" ]; then
+            cp "public/$NAME/mix.wav" out/audio.wav
+            ffmpeg -v error -y -i out/video.mp4 -i out/audio.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 256k -shortest -movflags +faststart "out/${NAME}.mp4"
+          elif [ -f "public/$NAME/narracao.wav" ]; then
             ffmpeg -v error -y -i "public/$NAME/narracao.wav" -i "public/$NAME/trilha.wav" -filter_complex "[0]aresample=48000[a];[1]aresample=48000,volume=0.9[b];[a][b]amix=inputs=2:normalize=0:duration=longest,alimiter=limit=0.95" -ar 48000 out/audio.wav
             ffmpeg -v error -y -i out/video.mp4 -i out/audio.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 256k -shortest -movflags +faststart "out/${NAME}.mp4"
           else

@@ -1,0 +1,115 @@
+{
+  "id": "pombo",
+  "titulo": "Você bebe leite de macho.",
+  "species": "Columba livia",
+  "cta": "Seu pai sabia dessa? SIM ou NÃO?",
+  "cenas": [
+    {
+      "id": "gancho",
+      "label": "LEITE DE MACHO",
+      "text": "Você bebe leite de macho.",
+      "keywords": [
+        "leite",
+        "macho"
+      ],
+      "audio": "01.mp3"
+    },
+    {
+      "id": "identidade",
+      "label": "POMBO",
+      "text": "Você é um filhote de pombo. E esse leite sai do papo do seu pai.",
+      "keywords": [
+        "pombo",
+        "papo",
+        "pai"
+      ],
+      "audio": "02.mp3"
+    },
+    {
+      "id": "papo",
+      "label": "REQUEIJÃO",
+      "text": "Como assim, de macho? Seu pai faz igual sua mãe, com o mesmo tipo de hormônio envolvido no leite materno. A camada interna do papo engrossa e se enche de células nutritivas. Aí essa camada descasca e vira pasta. Esse é seu requeijão.",
+      "keywords": [
+        "macho",
+        "papo",
+        "células",
+        "pasta",
+        "requeijão"
+      ],
+      "audio": "03.mp3"
+    },
+    {
+      "id": "falcao",
+      "label": "MOTOBOY",
+      "text": "Fazer leite dá uma fome danada. Por isso seu pai sai pra comer na praça. E na cidade tem falcão-peregrino, que caça pombo até no centro. Seu pai desvia, volta e te serve na boca. Esse é seu motoboy.",
+      "keywords": [
+        "fome",
+        "falcão-peregrino",
+        "desvia",
+        "boca",
+        "motoboy"
+      ],
+      "audio": "04.mp3"
+    },
+    {
+      "id": "crescimento",
+      "label": "ESTIRÃO",
+      "text": "Em quatro semanas, você fica do tamanho dele. Um humano leva uns dezoito anos pra isso. Esse é seu estirão.",
+      "keywords": [
+        "quatro",
+        "semanas",
+        "dezoito",
+        "estirão"
+      ],
+      "audio": "05.mp3"
+    },
+    {
+      "id": "anonimo",
+      "label": "MODO ANÔNIMO",
+      "text": "Já viu filhote de pombo? Quase ninguém viu. Porque você só sai do ninho já com pena e tamanho de adulto. Esse é seu modo anônimo.",
+      "keywords": [
+        "filhote",
+        "ninho",
+        "pena",
+        "anônimo"
+      ],
+      "audio": "06.mp3"
+    },
+    {
+      "id": "rancor",
+      "label": "RANCOR",
+      "text": "Quem te enxota fica marcado. Pombo de rua reconhece quem correu atrás dele, mesmo de roupa trocada. E continua fugindo, mesmo quando a pessoa não enxota mais. Esse é seu rancor.",
+      "keywords": [
+        "enxota",
+        "reconhece",
+        "roupa",
+        "rancor"
+      ],
+      "audio": "07.mp3"
+    },
+    {
+      "id": "humanos",
+      "label": "RATO COM ASA?",
+      "text": "Aí te chamam de rato com asa. Só que foi gente que te trouxe pro Brasil, pra criar em casa. E quem te joga pipoca na praça também é gente.",
+      "keywords": [
+        "rato",
+        "gente",
+        "Brasil",
+        "pipoca"
+      ],
+      "audio": "08.mp3"
+    },
+    {
+      "id": "recap",
+      "label": "LEITE DE MACHO",
+      "text": "Seu pai te deu leite, driblou um falcão pra voltar, e você cresceu escondido no ninho. Depois, aprendeu a reconhecer quem te enxota. Você bebe leite de macho.",
+      "keywords": [
+        "leite",
+        "falcão",
+        "enxota",
+        "macho"
+      ],
+      "audio": "09.mp3"
+    }
+  ]
+}
