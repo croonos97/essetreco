@@ -1,0 +1,438 @@
+{
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "durationInFrames": 2561,
+  "audioOffset": 0.5,
+  "planos": [
+    {
+      "id": "01-mordida-gancho",
+      "from": 0,
+      "to": 2.449,
+      "scheme": false,
+      "frames": {
+        "inicio": 0,
+        "meio": 36,
+        "fim": 73
+      }
+    },
+    {
+      "id": "02-identidade-floresta",
+      "from": 2.449,
+      "to": 3.589,
+      "scheme": false,
+      "frames": {
+        "inicio": 74,
+        "meio": 90,
+        "fim": 107
+      }
+    },
+    {
+      "id": "03-mesmo-bambu",
+      "from": 3.589,
+      "to": 5.869,
+      "scheme": false,
+      "frames": {
+        "inicio": 108,
+        "meio": 141,
+        "fim": 176
+      }
+    },
+    {
+      "id": "04-boca-ao-intestino",
+      "from": 5.869,
+      "to": 7.969,
+      "scheme": false,
+      "frames": {
+        "inicio": 177,
+        "meio": 207,
+        "fim": 239
+      }
+    },
+    {
+      "id": "05-intestino-ancestral",
+      "from": 7.969,
+      "to": 8.894,
+      "scheme": true,
+      "frames": {
+        "inicio": 240,
+        "meio": 252,
+        "fim": 266
+      }
+    },
+    {
+      "id": "06-pata-pega-colmo",
+      "from": 8.894,
+      "to": 11.874,
+      "scheme": false,
+      "frames": {
+        "inicio": 267,
+        "meio": 311,
+        "fim": 356
+      }
+    },
+    {
+      "id": "07-pata-real",
+      "from": 11.874,
+      "to": 12.994,
+      "scheme": false,
+      "frames": {
+        "inicio": 357,
+        "meio": 373,
+        "fim": 389
+      }
+    },
+    {
+      "id": "08-parece-sexto-dedo",
+      "from": 12.994,
+      "to": 15.174,
+      "scheme": false,
+      "frames": {
+        "inicio": 390,
+        "meio": 422,
+        "fim": 455
+      }
+    },
+    {
+      "id": "09-osso-do-punho",
+      "from": 15.174,
+      "to": 16.834,
+      "scheme": true,
+      "frames": {
+        "inicio": 456,
+        "meio": 480,
+        "fim": 505
+      }
+    },
+    {
+      "id": "10-pegada-leva-a-boca",
+      "from": 16.834,
+      "to": 19.634,
+      "scheme": false,
+      "frames": {
+        "inicio": 506,
+        "meio": 547,
+        "fim": 589
+      }
+    },
+    {
+      "id": "11-polegar-de-araque",
+      "from": 19.634,
+      "to": 20.323,
+      "scheme": false,
+      "frames": {
+        "inicio": 590,
+        "meio": 599,
+        "fim": 609
+      }
+    },
+    {
+      "id": "12-bambu-preso",
+      "from": 20.323,
+      "to": 22.403,
+      "scheme": false,
+      "frames": {
+        "inicio": 610,
+        "meio": 640,
+        "fim": 672
+      }
+    },
+    {
+      "id": "13-casca-cai",
+      "from": 22.403,
+      "to": 23.683,
+      "scheme": false,
+      "frames": {
+        "inicio": 673,
+        "meio": 691,
+        "fim": 710
+      }
+    },
+    {
+      "id": "14-esmaga-parte-clara",
+      "from": 23.683,
+      "to": 25.323,
+      "scheme": false,
+      "frames": {
+        "inicio": 711,
+        "meio": 735,
+        "fim": 759
+      }
+    },
+    {
+      "id": "15-molares-e-musculos",
+      "from": 25.323,
+      "to": 27.843,
+      "scheme": true,
+      "frames": {
+        "inicio": 760,
+        "meio": 797,
+        "fim": 835
+      }
+    },
+    {
+      "id": "16-triturador",
+      "from": 27.843,
+      "to": 31.995,
+      "scheme": false,
+      "frames": {
+        "inicio": 836,
+        "meio": 897,
+        "fim": 959
+      }
+    },
+    {
+      "id": "17-triturar-nao-basta",
+      "from": 31.995,
+      "to": 35.295,
+      "scheme": false,
+      "frames": {
+        "inicio": 960,
+        "meio": 1009,
+        "fim": 1058
+      }
+    },
+    {
+      "id": "18-nutrientes-e-fibra",
+      "from": 35.295,
+      "to": 38.075,
+      "scheme": true,
+      "frames": {
+        "inicio": 1059,
+        "meio": 1100,
+        "fim": 1142
+      }
+    },
+    {
+      "id": "19-fibra-no-residuo",
+      "from": 38.075,
+      "to": 41.195,
+      "scheme": false,
+      "frames": {
+        "inicio": 1143,
+        "meio": 1189,
+        "fim": 1235
+      }
+    },
+    {
+      "id": "20-trabalho-duplo",
+      "from": 41.195,
+      "to": 43.425,
+      "scheme": false,
+      "frames": {
+        "inicio": 1236,
+        "meio": 1269,
+        "fim": 1302
+      }
+    },
+    {
+      "id": "21-come-muito",
+      "from": 43.425,
+      "to": 46.585,
+      "scheme": false,
+      "frames": {
+        "inicio": 1303,
+        "meio": 1350,
+        "fim": 1397
+      }
+    },
+    {
+      "id": "22-metade-do-dia",
+      "from": 46.585,
+      "to": 47.465,
+      "scheme": false,
+      "frames": {
+        "inicio": 1398,
+        "meio": 1410,
+        "fim": 1423
+      }
+    },
+    {
+      "id": "23-procura-na-pilha",
+      "from": 47.465,
+      "to": 51.185,
+      "scheme": false,
+      "frames": {
+        "inicio": 1424,
+        "meio": 1479,
+        "fim": 1535
+      }
+    },
+    {
+      "id": "24-pega-outro-colmo",
+      "from": 51.185,
+      "to": 52.745,
+      "scheme": false,
+      "frames": {
+        "inicio": 1536,
+        "meio": 1558,
+        "fim": 1582
+      }
+    },
+    {
+      "id": "25-almoco-expediente",
+      "from": 52.745,
+      "to": 53.722,
+      "scheme": false,
+      "frames": {
+        "inicio": 1583,
+        "meio": 1597,
+        "fim": 1611
+      }
+    },
+    {
+      "id": "26-repouso-no-tronco",
+      "from": 53.722,
+      "to": 57.782,
+      "scheme": false,
+      "frames": {
+        "inicio": 1612,
+        "meio": 1672,
+        "fim": 1733
+      }
+    },
+    {
+      "id": "27-repouso-dejeto-novo",
+      "from": 57.782,
+      "to": 59.702,
+      "scheme": false,
+      "frames": {
+        "inicio": 1734,
+        "meio": 1762,
+        "fim": 1791
+      }
+    },
+    {
+      "id": "28-boca-fecha-servico-segue",
+      "from": 59.702,
+      "to": 61.023,
+      "scheme": false,
+      "frames": {
+        "inicio": 1792,
+        "meio": 1810,
+        "fim": 1830
+      }
+    },
+    {
+      "id": "29-cardapio-local",
+      "from": 61.023,
+      "to": 64.38300000000001,
+      "scheme": false,
+      "frames": {
+        "inicio": 1831,
+        "meio": 1881,
+        "fim": 1931
+      }
+    },
+    {
+      "id": "30-especie-da-mancha",
+      "from": 64.38300000000001,
+      "to": 65.183,
+      "scheme": false,
+      "frames": {
+        "inicio": 1932,
+        "meio": 1943,
+        "fim": 1955
+      }
+    },
+    {
+      "id": "31-florescer-na-regiao",
+      "from": 65.183,
+      "to": 66.303,
+      "scheme": false,
+      "frames": {
+        "inicio": 1956,
+        "meio": 1972,
+        "fim": 1989
+      }
+    },
+    {
+      "id": "32-mancha-seca",
+      "from": 66.303,
+      "to": 70.023,
+      "scheme": false,
+      "frames": {
+        "inicio": 1990,
+        "meio": 2044,
+        "fim": 2100
+      }
+    },
+    {
+      "id": "33-procura-outro-lugar",
+      "from": 70.023,
+      "to": 72.383,
+      "scheme": false,
+      "frames": {
+        "inicio": 2101,
+        "meio": 2136,
+        "fim": 2171
+      }
+    },
+    {
+      "id": "34-chega-ao-verde",
+      "from": 72.383,
+      "to": 74.476,
+      "scheme": false,
+      "frames": {
+        "inicio": 2172,
+        "meio": 2202,
+        "fim": 2234
+      }
+    },
+    {
+      "id": "35-recap-polegar",
+      "from": 74.476,
+      "to": 75.716,
+      "scheme": false,
+      "frames": {
+        "inicio": 2235,
+        "meio": 2252,
+        "fim": 2271
+      }
+    },
+    {
+      "id": "36-recap-mandibula",
+      "from": 75.716,
+      "to": 78.096,
+      "scheme": false,
+      "frames": {
+        "inicio": 2272,
+        "meio": 2307,
+        "fim": 2342
+      }
+    },
+    {
+      "id": "37-recap-dia-comida",
+      "from": 78.096,
+      "to": 79.536,
+      "scheme": false,
+      "frames": {
+        "inicio": 2343,
+        "meio": 2364,
+        "fim": 2386
+      }
+    },
+    {
+      "id": "38-reencontra-mordida",
+      "from": 79.536,
+      "to": 83.216,
+      "scheme": false,
+      "frames": {
+        "inicio": 2387,
+        "meio": 2441,
+        "fim": 2496
+      }
+    },
+    {
+      "id": "39-loop-exato",
+      "from": 83.216,
+      "to": 85.36666666666666,
+      "scheme": false,
+      "frames": {
+        "inicio": 2497,
+        "meio": 2528,
+        "fim": 2560
+      }
+    }
+  ]
+}

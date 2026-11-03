@@ -1,0 +1,65 @@
+[
+  {
+    "scene": "gancho",
+    "expected": "Você cai de boca no bambu.",
+    "heard": "Você cai de boca no bambu.",
+    "similarity": 1.0,
+    "pass": true
+  },
+  {
+    "scene": "contradicao",
+    "expected": "Você é um panda. Parece que nasceu pra comer isso. Só que seu intestino ainda se parece mais com o de um carnívoro.",
+    "heard": "Você é um panda, parece que nasceu para comer isso, só que seu intestino ainda se parece mais com o de um carnívoro.",
+    "similarity": 0.996,
+    "pass": true
+  },
+  {
+    "scene": "pegada",
+    "expected": "Primeiro, você precisa segurar o almoço. E ganha uma ajuda que parece um sexto dedo. Só parece. É um osso do punho aumentado, que funciona como um polegar. Esse é seu polegar de araque.",
+    "heard": "Primeiro, você precisa segurar o almoço e ganha uma ajuda que parece um sexto dedo. Só parece. É um osso do punho aumentado que funciona como um polegar. Esse é seu polegar de Araque.",
+    "similarity": 1.0,
+    "pass": true
+  },
+  {
+    "scene": "mandibula",
+    "expected": "Com o bambu preso, você tira a casca com os dentes e esmaga a parte de dentro. Mandíbula forte, músculos grandes e dentes de trás preparados pra triturar. Esse é seu triturador.",
+    "heard": "Com o bambu preso, você tira a casca com os dentes e esmaga a parte de dentro. Mandíbula forte, músculos grandes e dentes de trais preparados para triturar. Esse é seu triturador.",
+    "similarity": 0.994,
+    "pass": true
+  },
+  {
+    "scene": "digestao",
+    "expected": "Só que triturar não resolve tudo. Seu sistema digestivo aproveita mal essa comida cheia de fibra. Uma parte do que entra sai sem ser aproveitada. Você dá trabalho pra boca e pro intestino.",
+    "heard": "Só que triturar não resolve tudo, seu sistema digestivo aproveita mal essa comida cheia de fibra, uma parte do que entra sai sem ser aproveitada. Você dá trabalho pra boca e pro intestino.",
+    "similarity": 1.0,
+    "pass": true
+  },
+  {
+    "scene": "rotina",
+    "expected": "Pra compensar, você come muito. Pode passar mais da metade do dia procurando comida e mastigando. Acaba um bambu, você pega outro. Seu almoço tem expediente.",
+    "heard": "Para compensar, você come muito. Pode passar mais da metade do dia procurando comida e mastigando. Acaba um bambu, você pega outro. Seu almoço tem expediente.",
+    "similarity": 0.997,
+    "pass": true
+  },
+  {
+    "scene": "descanso",
+    "expected": "Na pausa, você descansa. Mas até descansando pode continuar fazendo cocô. A boca fecha. O serviço continua.",
+    "heard": "Na pausa você descansa, mas até descansando pode continuar fazendo cocô. A boca fecha, o serviço continua.",
+    "similarity": 1.0,
+    "pass": true
+  },
+  {
+    "scene": "floracao",
+    "expected": "E ainda tem um problema com o cardápio. Bambus de uma mesma espécie podem florescer e morrer juntos numa região. Quando isso acontece, você precisa procurar comida em outro lugar. Seu buffet pode fechar de uma vez.",
+    "heard": "E ainda tem um problema com o cardápio. Bambus de uma mesma espécie podem florescer e morrer juntos numa região. Quando isso acontece, você precisa procurar comida em outro lugar. Seu buffet pode fechar de uma vez.",
+    "similarity": 1.0,
+    "pass": true
+  },
+  {
+    "scene": "loop",
+    "expected": "Polegar de araque, mandíbula de triturador e boa parte do dia atrás de comida. Tudo isso pra conseguir continuar fazendo o que você faz melhor. Você cai de boca no bambu.",
+    "heard": "Olegar de Araque, mandíbula de triturador e boa parte do dia atrás de comida. Tudo isso para conseguir continuar fazendo o que você faz melhor. Você cai de boca no bambu.",
+    "similarity": 0.994,
+    "pass": true
+  }
+]
