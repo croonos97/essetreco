@@ -1,0 +1,2994 @@
+{
+  "status": "APROVADO_NO_RETESTE_VISUAL_COM_LIMITES_PERCEPTUAIS",
+  "aprovacao_final": false,
+  "checklist_100_porcento": false,
+  "versao_auditada": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_corrected.mp4",
+  "sha256": "5b273560923ad8529cd94f86f9a2b60e4a950808b230027e20321803d0795b54",
+  "data": "2026-11-03",
+  "revisor": "panda_qa_final — independente do roteiro, crítica e direção",
+  "independencia": "Não escrevi/dirigi produção, não alterei código, narração ou MP4. Produzi apenas evidências e relatório de QA.",
+  "notas": {
+    "visual_material_enquadramento": 7.5,
+    "editorial_execucao_causal": 7.0,
+    "geral_desta_versao_no_escopo_visual": 7.0,
+    "potencial_200mil_views": null,
+    "justificativa": "O bloqueador24 foi resolvido: retirar/elevar agora é legível. Leitura de materiais/mundo preservada; ainda há repetição da pose e demonstrações parciais não bloqueantes. Nota limitada ao escopo visual, sem inventar escuta ou reprodução normal."
+  },
+  "arquivo": {
+    "file": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_corrected.mp4",
+    "format": "mov,mp4,m4a,3gp,3g2,mj2",
+    "duration": 85.366667,
+    "size_bytes": 271438917,
+    "bitrate": 25437461,
+    "video": {
+      "codec": "h264",
+      "profile": "High",
+      "width": 1080,
+      "height": 1920,
+      "display_aspect": "9:16",
+      "fps": 30.0,
+      "r_frame_rate": "30/1",
+      "avg_frame_rate": "30/1",
+      "variable_frame_rate_suspected": false,
+      "pix_fmt": "yuv420p",
+      "bit_depth": 8,
+      "hdr": false,
+      "hdr_signal": false,
+      "hdr_format": null,
+      "dolby_vision": null,
+      "color_space": null,
+      "color_primaries": "bt709",
+      "color_transfer": "iec61966-2-1",
+      "color_range": "tv",
+      "rotation": 0,
+      "nb_frames": 2561,
+      "bitrate": 25230000
+    },
+    "audio": {
+      "codec": "aac",
+      "channels": 1,
+      "channel_layout": "mono",
+      "sample_rate": 44100,
+      "bitrate": 198593
+    },
+    "subtitle_streams": 0,
+    "data_streams": 0,
+    "chapters": [],
+    "tags": {},
+    "subtitle_stream_details": [],
+    "audio_streams": [
+      {
+        "index": 0,
+        "codec": "aac",
+        "channels": 1,
+        "channel_layout": "mono",
+        "sample_rate": 44100,
+        "language": "und",
+        "title": null
+      }
+    ]
+  },
+  "verificacao_tecnica": {
+    "status": "completed",
+    "output": null,
+    "dry_run": false,
+    "commands": [
+      "'C:\\Users\\gnnoc\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\\ffmpeg-9.0.1-full_build\\bin\\ffmpeg.EXE' -hide_banner -nostdin -i 'C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_corrected.mp4' -vn -af loudnorm=I=-14:TP=-1:LRA=11:print_format=json -f null -"
+    ],
+    "verified": false,
+    "verification": [],
+    "platform": "reels",
+    "checks": [
+      {
+        "check": "duration",
+        "status": "PASS",
+        "value": "85.37s",
+        "expected": "<= 90s",
+        "fix": "decide with the user: cut.py keeps quality but drops content; fit.py --duration speeds up (audio pitch-preserved, motion faster)",
+        "reason": "",
+        "kind": "judgement"
+      },
+      {
+        "check": "aspect",
+        "status": "PASS",
+        "value": "9:16",
+        "expected": "9:16/4:5/1:1",
+        "fix": "fit.py --aspect 9:16 --fit pad (keeps everything, adds bars) or crop (fills the frame, loses the edges: check the subject with look.py)",
+        "reason": "",
+        "kind": "judgement"
+      },
+      {
+        "check": "resolution",
+        "status": "PASS",
+        "value": "1080x1920",
+        "expected": "short side >= 1080",
+        "fix": "upscaling will not add detail; re-export from the master",
+        "reason": "",
+        "kind": "judgement"
+      },
+      {
+        "check": "fps",
+        "status": "PASS",
+        "value": "30",
+        "expected": "<= 60",
+        "fix": "fit.py --fps 30 (drops half the frames of 60 fps motion; fine for talking heads, visible on sports/gaming)",
+        "reason": "",
+        "kind": "judgement"
+      },
+      {
+        "check": "vfr",
+        "status": "PASS",
+        "value": "constant",
+        "expected": "constant",
+        "fix": "fit.py --fps N (any re-encode conforms it)",
+        "reason": "",
+        "kind": "format"
+      },
+      {
+        "check": "video codec",
+        "status": "PASS",
+        "value": "h264",
+        "expected": "h264/hevc",
+        "fix": "export.py --preset reels",
+        "reason": "",
+        "kind": "format"
+      },
+      {
+        "check": "pixel format",
+        "status": "PASS",
+        "value": "yuv420p",
+        "expected": "yuv420p (8-bit 4:2:0)",
+        "fix": "export.py preset re-encodes to yuv420p",
+        "reason": "",
+        "kind": "format"
+      },
+      {
+        "check": "colour",
+        "status": "WARN",
+        "value": "bt709/iec61966-2-1",
+        "expected": "bt709/bt709 tagged (or HDR)",
+        "fix": "color.py --retag bt709 when the picture really is 709; color.py --to-sdr when it is HDR",
+        "reason": "",
+        "kind": "format"
+      },
+      {
+        "check": "file size",
+        "status": "PASS",
+        "value": "258.9 MB",
+        "expected": "<= 4096 MB",
+        "fix": "export.py --crf 24 or lower resolution",
+        "reason": "",
+        "kind": "format"
+      },
+      {
+        "check": "audio",
+        "status": "PASS",
+        "value": "aac 1ch 44100Hz",
+        "expected": "present",
+        "fix": "",
+        "reason": "",
+        "kind": "format"
+      },
+      {
+        "check": "subtitles",
+        "status": "WARN",
+        "value": "none",
+        "expected": ">= 1 language-tagged subtitle track",
+        "fix": "caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)",
+        "reason": "subtitles are optional, but they are the cheapest accessibility win a delivery has",
+        "kind": "format"
+      },
+      {
+        "check": "loudness",
+        "status": "PASS",
+        "value": "-15.5 LUFS",
+        "expected": "-14 Ã‚Â± 2 LUFS",
+        "fix": "loudness.py -I -14 for speech or music; leave ambience/near-silence (<= -40 LUFS) alone and say so",
+        "reason": "",
+        "kind": "judgement"
+      },
+      {
+        "check": "true peak",
+        "status": "PASS",
+        "value": "-1.2 dBTP",
+        "expected": "<= -1 dBTP",
+        "fix": "loudness.py --tp -1",
+        "reason": "",
+        "kind": "judgement"
+      }
+    ],
+    "failed": 0,
+    "warnings": 2,
+    "ok": true
+  },
+  "metricas_independentes": {
+    "sha256": "5b273560923ad8529cd94f86f9a2b60e4a950808b230027e20321803d0795b54",
+    "audio_pcm_wav_identico_ao_anterior": true,
+    "audio_wav_sha256": "5f91dd7b3dc52e6bc80474d6a7934d4f7c4c17bb74facdd9ad2d5c5f0891d74b",
+    "loop": {
+      "regiao": "x0..1079/y480..1919",
+      "rgb_media_primeiro_ultimo": 1.7148881172839505,
+      "fracao_canais_diferenca_maior_10": 0.009838177297668038,
+      "primeiro_quadro_identico_ao_MP4_anterior": false,
+      "ultimo_quadro_identico_ao_MP4_anterior": false
+    }
+  },
+  "cobertura": {
+    "planos": 39,
+    "pontos_inicio_meio_fim": 117,
+    "cortes_com_pares_adjacentes": 38,
+    "planos_com_sequencias_contiguas": [
+      1,
+      6,
+      9,
+      10,
+      13,
+      14,
+      15,
+      18,
+      19,
+      24,
+      27,
+      30,
+      31,
+      32,
+      33,
+      34,
+      38,
+      39
+    ],
+    "quadros_nominais_nas_sequencias": 1220,
+    "velocidade_normal_com_audio": "NÃO",
+    "escuta_humana": "NÃO"
+  },
+  "bloqueadores": [],
+  "observacoes_nao_bloqueantes": [
+    {
+      "plano": 4,
+      "texto": "Close da boca, seguido pelo esquema; não identifiquei um fragmento sendo acompanhado até o intestino como previsto."
+    },
+    {
+      "plano": 6,
+      "texto": "Colmo já está entre as patas na posição baixa no início; a sequência comprova elevação, mas não retirada física da pilha."
+    },
+    {
+      "plano": 30,
+      "texto": "Close dos colmos/folhas locais; formação dos brotos não ficou demonstrada neste plano, flores entram no corte seguinte."
+    },
+    {
+      "plano": 34,
+      "texto": "Chegada em área verde, novo colmo sobe, sem colmo ocultando o rosto; corte de caminhada para sentado. Mancha seca não é legível neste enquadramento."
+    },
+    {
+      "plano": 1,
+      "texto": "Título abaixo da faixa superior8%da máscara reels; última letra de BOCA encosta poucos pixels na área lateral12%. Não há oclusão material superior comprovada. Conferir na prévia do app antes de publicar."
+    }
+  ],
+  "limites": [
+    "Não assisti ao MP4 em reprodução contínua em velocidade normal e não ouvi o áudio como um ouvinte humano. Ritmo, naturalidade, mascaramento da voz, cliques e sincronismo perceptual permanecem pendentes.",
+    "Início/meio/fim dos39planos foram inspecionados, com pares adjacentes fim/início nos38cortes; isso não é inspeção de todos os2561quadros.",
+    "18planos críticos receberam pranchas sequenciais de todos os quadros nominais dos intervalos, em270×480; o primeiro quadro foi extraído separadamente.16intervalos usam cópias QA cortadas com precisão de quadro, CRF24; planos30/31 foram extraídos diretamente do original quadro a quadro. Mapeamento temporal nominal pode ter tolerância de um quadro; não é laudo geométrico de todos os pixels a1080p.",
+    "Legendas queimadas foram lidas nas117amostras e nas sequências críticas; não houve OCR/conferência humana de todas as palavras e fades. A transcrição conferida fornecida é evidência anterior, não escuta minha do MP4.",
+    "Referências cadela/veado foram vistas como folhas de contato; comparação de materiais/enquadramentos é válida, mas não uma comparação de movimento ou áudio dos vídeos originais.",
+    "Sem prévia dentro do aplicativo Instagram. A máscara reels é orientação da skill, não medição da UI atual nem garantia de segurança em todos os aparelhos.",
+    "Métricas de áudio e correlação com pré-mix não substituem escuta. PubMed20814990 não retornou texto útil nesta consulta; fundamentos centrais também constam nas páginas oficiais dos zoológicos."
+  ],
+  "fontes_reconsultadas": [
+    {
+      "url": "https://nationalzoo.si.edu/animals/giant-panda",
+      "escopo": "Pseudopolegar, mandíbula/molares, digestão ineficiente,10–16h e defecação em repouso sustentados."
+    },
+    {
+      "url": "https://animals.sandiegozoo.org/animals/giant-panda",
+      "escopo": "Descascamento, cinco dedos+pseudopolegar e floração/morte conjunta local/migração sustentados."
+    },
+    {
+      "url": "https://nhm.org/press/eating-bamboo-its-all-wrist",
+      "escopo": "Sesamoide radial e compromisso funcional da pega/caminhada sustentados."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20814990/",
+      "escopo": "Texto não recuperado; sem nova validação desse artigo."
+    }
+  ],
+  "planos": [
+    {
+      "plano": "01-mordida-gancho",
+      "intervalo_s": [
+        0.0,
+        2.466666666666667
+      ],
+      "quadros": {
+        "inicio": 0,
+        "meio": 36,
+        "fim": 73
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 0.0,
+        "meio": 1.2,
+        "fim": 2.433333
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "SIM",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Panda, colmo, boca e floresta já presentes; headline legível; os quadros sequenciais mostram pequena mastigação e variação de câmera.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_01_03.jpg",
+        "out\\panda_qa_final\\crit_01_000.jpg",
+        "out\\panda_qa_final\\crit_01_048.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "02-identidade-floresta",
+      "intervalo_s": [
+        2.466666666666667,
+        3.6
+      ],
+      "quadros": {
+        "inicio": 74,
+        "meio": 90,
+        "fim": 107
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 2.466667,
+        "meio": 3.0,
+        "fim": 3.566667
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Revelação de corpo e floresta; identificação PANDA/Ailuropoda melanoleuca legível.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_01_03.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "03-mesmo-bambu",
+      "intervalo_s": [
+        3.6,
+        5.9
+      ],
+      "quadros": {
+        "inicio": 108,
+        "meio": 141,
+        "fim": 176
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 3.6,
+        "meio": 4.7,
+        "fim": 5.866667
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Mesmo animal e colmo; contracampo preserva relação pata/boca.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_01_03.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "04-boca-ao-intestino",
+      "intervalo_s": [
+        5.9,
+        7.166666666666667
+      ],
+      "quadros": {
+        "inicio": 177,
+        "meio": 195,
+        "fim": 214
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 5.9,
+        "meio": 6.5,
+        "fim": 7.133333
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "NÃO",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Close da boca, seguido pelo esquema; não identifiquei um fragmento sendo acompanhado até o intestino como previsto.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_04_06.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "05-intestino-ancestral",
+      "intervalo_s": [
+        7.166666666666667,
+        8.9
+      ],
+      "quadros": {
+        "inicio": 215,
+        "meio": 240,
+        "fim": 266
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 7.166667,
+        "meio": 8.0,
+        "fim": 8.866667
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Esquema digestivo inteiro e rotulado sem escala; nenhuma transformação em outro animal.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_04_06.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "06-pata-pega-colmo",
+      "intervalo_s": [
+        8.9,
+        11.9
+      ],
+      "quadros": {
+        "inicio": 267,
+        "meio": 311,
+        "fim": 356
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 8.9,
+        "meio": 10.366667,
+        "fim": 11.866667
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "NÃO",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "SIM",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Colmo já está entre as patas na posição baixa no início; a sequência comprova elevação, mas não retirada física da pilha.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_04_06.jpg",
+        "out\\panda_qa_final\\crit_06_000.jpg",
+        "out\\panda_qa_final\\crit_06_048.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "07-pata-real",
+      "intervalo_s": [
+        11.9,
+        13.0
+      ],
+      "quadros": {
+        "inicio": 357,
+        "meio": 373,
+        "fim": 389
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 11.9,
+        "meio": 12.433333,
+        "fim": 12.966667
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Patas/unhas e apoio lateral legíveis; contato com colmo mantido nas amostras.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_07_09.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "08-parece-sexto-dedo",
+      "intervalo_s": [
+        13.0,
+        15.2
+      ],
+      "quadros": {
+        "inicio": 390,
+        "meio": 422,
+        "fim": 455
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 13.0,
+        "meio": 14.066667,
+        "fim": 15.166667
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Contracampo do punho, sem sexto dedo humano independente visível.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_07_09.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "09-osso-do-punho",
+      "intervalo_s": [
+        15.2,
+        16.866666666666667
+      ],
+      "quadros": {
+        "inicio": 456,
+        "meio": 480,
+        "fim": 505
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 15.2,
+        "meio": 16.0,
+        "fim": 16.833333
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "SIM",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Cinco raios digitais e saliência lateral destacada no esquema local; giro contínuo.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_07_09.jpg",
+        "out\\panda_qa_final\\crit_09_000.jpg",
+        "out\\panda_qa_final\\crit_09_048.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "10-pegada-leva-a-boca",
+      "intervalo_s": [
+        16.866666666666667,
+        19.666666666666668
+      ],
+      "quadros": {
+        "inicio": 506,
+        "meio": 547,
+        "fim": 589
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 16.866667,
+        "meio": 18.233333,
+        "fim": 19.633333
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "SIM",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Colmo sobe com as patas até a boca; sequência contínua, sem salto grosseiro de posição identificado.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_10_12.jpg",
+        "out\\panda_qa_final\\crit_10_000.jpg",
+        "out\\panda_qa_final\\crit_10_048.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "11-polegar-de-araque",
+      "intervalo_s": [
+        19.666666666666668,
+        20.333333333333332
+      ],
+      "quadros": {
+        "inicio": 590,
+        "meio": 599,
+        "fim": 609
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 19.666667,
+        "meio": 19.966667,
+        "fim": 20.3
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Pega/mordida e label POLEGAR DE ARAQUE legíveis; plano curto.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_10_12.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "12-bambu-preso",
+      "intervalo_s": [
+        20.333333333333332,
+        22.433333333333334
+      ],
+      "quadros": {
+        "inicio": 610,
+        "meio": 640,
+        "fim": 672
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 20.333333,
+        "meio": 21.333333,
+        "fim": 22.4
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Colmo entre patas e região dos dentes; enquadramento permite ver contato.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_10_12.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "13-casca-cai",
+      "intervalo_s": [
+        22.433333333333334,
+        23.7
+      ],
+      "quadros": {
+        "inicio": 673,
+        "meio": 691,
+        "fim": 710
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 22.433333,
+        "meio": 23.033333,
+        "fim": 23.666667
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "SIM",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Faixa interna clara aparece no colmo; tiras se desprendem e caem na sequência.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_13_15.jpg",
+        "out\\panda_qa_final\\crit_13_000.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "14-esmaga-parte-clara",
+      "intervalo_s": [
+        23.7,
+        25.333333333333332
+      ],
+      "quadros": {
+        "inicio": 711,
+        "meio": 735,
+        "fim": 759
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 23.7,
+        "meio": 24.5,
+        "fim": 25.3
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "SIM",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Parte clara e fibras visíveis; mastigação pequena. A prancha não demonstra fluidez em velocidade normal.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_13_15.jpg",
+        "out\\panda_qa_final\\crit_14_000.jpg",
+        "out\\panda_qa_final\\crit_14_048.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "15-molares-e-musculos",
+      "intervalo_s": [
+        25.333333333333332,
+        27.866666666666667
+      ],
+      "quadros": {
+        "inicio": 760,
+        "meio": 797,
+        "fim": 835
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 25.333333,
+        "meio": 26.566667,
+        "fim": 27.833333
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "SIM",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Janela dos dentes/músculos inteira e sem escala; mandíbula abre/fecha na sequência.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_13_15.jpg",
+        "out\\panda_qa_final\\crit_15_000.jpg",
+        "out\\panda_qa_final\\crit_15_048.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "16-triturador",
+      "intervalo_s": [
+        27.866666666666667,
+        32.0
+      ],
+      "quadros": {
+        "inicio": 836,
+        "meio": 897,
+        "fim": 959
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 27.866667,
+        "meio": 29.9,
+        "fim": 31.966667
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Retorno à alimentação, fibras no chão e label TRITURADOR; sem cartaz final.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_16_18.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "17-triturar-nao-basta",
+      "intervalo_s": [
+        32.0,
+        35.3
+      ],
+      "quadros": {
+        "inicio": 960,
+        "meio": 1009,
+        "fim": 1058
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 32.0,
+        "meio": 33.633333,
+        "fim": 35.266667
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Alimentação/descartes visíveis; mudança de enquadramento para introduzir digestão.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_16_18.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "18-nutrientes-e-fibra",
+      "intervalo_s": [
+        35.3,
+        38.1
+      ],
+      "quadros": {
+        "inicio": 1059,
+        "meio": 1100,
+        "fim": 1142
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 35.3,
+        "meio": 36.666667,
+        "fim": 38.066667
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "SIM",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Dourado sai do tubo e fibra permanece em trânsito; rótulo das cores evita afirmar ausência total de digestão.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_16_18.jpg",
+        "out\\panda_qa_final\\crit_18_000.jpg",
+        "out\\panda_qa_final\\crit_18_048.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "19-fibra-no-residuo",
+      "intervalo_s": [
+        38.1,
+        41.2
+      ],
+      "quadros": {
+        "inicio": 1143,
+        "meio": 1189,
+        "fim": 1235
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 38.1,
+        "meio": 39.633333,
+        "fim": 41.166667
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "SIM",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Dejeto estilizado com fibras junto à pata, desobstruído; passagem do esquema ao chão é corte sem acompanhamento do mesmo fragmento.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_19_21.jpg",
+        "out\\panda_qa_final\\crit_19_000.jpg",
+        "out\\panda_qa_final\\crit_19_048.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "20-trabalho-duplo",
+      "intervalo_s": [
+        41.2,
+        43.43333333333333
+      ],
+      "quadros": {
+        "inicio": 1236,
+        "meio": 1269,
+        "fim": 1302
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 41.2,
+        "meio": 42.3,
+        "fim": 43.4
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Plano aberto mostra boca e dejeto simultaneamente; continuidade local com19.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_19_21.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "21-come-muito",
+      "intervalo_s": [
+        43.43333333333333,
+        46.6
+      ],
+      "quadros": {
+        "inicio": 1303,
+        "meio": 1350,
+        "fim": 1397
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 43.433333,
+        "meio": 45.0,
+        "fim": 46.566667
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Floresta, panda, pilha e descartes; dejeto antes frontal deixa de ser visível. Não atribuí erro geométrico só pela mudança de plano.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_19_21.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "22-metade-do-dia",
+      "intervalo_s": [
+        46.6,
+        47.46666666666667
+      ],
+      "quadros": {
+        "inicio": 1398,
+        "meio": 1410,
+        "fim": 1423
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 46.6,
+        "meio": 47.0,
+        "fim": 47.433333
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "10–16H com indicação VARIA, panda alimentando-se; duração de0,88s isolada, faixa permanece nos planos seguintes.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_22_24.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "23-procura-na-pilha",
+      "intervalo_s": [
+        47.46666666666667,
+        51.2
+      ],
+      "quadros": {
+        "inicio": 1424,
+        "meio": 1479,
+        "fim": 1535
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 47.466667,
+        "meio": 49.3,
+        "fim": 51.166667
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Panda quadrúpede se aproxima da pilha; chão e patas legíveis nas três amostras. Movimento normal não assistido.",
+      "evidencias": [
+        "out\\panda_qa_corrected\\plan_23_000.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_corrected.mp4"
+    },
+    {
+      "plano": "24-pega-outro-colmo",
+      "intervalo_s": [
+        51.2,
+        52.766666666666666
+      ],
+      "quadros": {
+        "inicio": 1536,
+        "meio": 1558,
+        "fim": 1582
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 51.2,
+        "meio": 51.933333,
+        "fim": 52.733333
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "SIM",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Enquadramento lateral deixa a pilha, contato baixo das patas e colmo legíveis; mesmo colmo se afasta da pilha e sobe continuamente até a boca. A pilha perde uma unidade por volta de52s/f1560. O tronco fica à esquerda e não esconde a ação. Contato inicial já está estabelecido no primeiro quadro do plano; não interpreto como filmagem naturalista de dedos fechando um por um.",
+      "evidencias": [
+        "out\\panda_qa_corrected\\plan_24_000.jpg",
+        "out\\panda_qa_corrected\\plan_24_018.jpg",
+        "out\\panda_qa_corrected\\plan_24_036.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_corrected.mp4"
+    },
+    {
+      "plano": "25-almoco-expediente",
+      "intervalo_s": [
+        52.766666666666666,
+        53.733333333333334
+      ],
+      "quadros": {
+        "inicio": 1583,
+        "meio": 1597,
+        "fim": 1611
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 52.766667,
+        "meio": 53.233333,
+        "fim": 53.7
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Retorno à mordida e EXPEDIENTE; descartes presentes.",
+      "evidencias": [
+        "out\\panda_qa_corrected\\plan_25_000.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_corrected.mp4"
+    },
+    {
+      "plano": "26-repouso-no-tronco",
+      "intervalo_s": [
+        53.733333333333334,
+        57.8
+      ],
+      "quadros": {
+        "inicio": 1612,
+        "meio": 1672,
+        "fim": 1733
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 53.733333,
+        "meio": 55.733333,
+        "fim": 57.766667
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Repouso junto ao tronco estabelecido; sem colmo na boca; nenhuma mastigação identificada nas amostras.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_25_27.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "27-repouso-dejeto-novo",
+      "intervalo_s": [
+        57.8,
+        59.733333333333334
+      ],
+      "quadros": {
+        "inicio": 1734,
+        "meio": 1762,
+        "fim": 1791
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 57.8,
+        "meio": 58.733333,
+        "fim": 59.7
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "SIM",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Dejetos passam de dois volumes para três por crescimento gradual; aparecem ao lado posterior, sem gore. A animação é estilizada, não queda anatômica realista.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_25_27.jpg",
+        "out\\panda_qa_final\\crit_27_000.jpg",
+        "out\\panda_qa_final\\crit_27_048.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "28-boca-fecha-servico-segue",
+      "intervalo_s": [
+        59.733333333333334,
+        61.03333333333333
+      ],
+      "quadros": {
+        "inicio": 1792,
+        "meio": 1810,
+        "fim": 1830
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 59.733333,
+        "meio": 60.333333,
+        "fim": 61.0
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Reação pequena do corpo, boca fechada e contexto de repouso preservado nas amostras.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_28_30.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "29-cardapio-local",
+      "intervalo_s": [
+        61.03333333333333,
+        64.4
+      ],
+      "quadros": {
+        "inicio": 1831,
+        "meio": 1881,
+        "fim": 1931
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 61.033333,
+        "meio": 62.7,
+        "fim": 64.366667
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Mancha/cenário verde e cardápio introduzidos; novo plano aberto.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_28_30.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "30-especie-da-mancha",
+      "intervalo_s": [
+        64.4,
+        65.2
+      ],
+      "quadros": {
+        "inicio": 1932,
+        "meio": 1943,
+        "fim": 1955
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 64.4,
+        "meio": 64.766667,
+        "fim": 65.166667
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "NÃO",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "SIM",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Close dos colmos/folhas locais; formação dos brotos não ficou demonstrada neste plano, flores entram no corte seguinte.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_28_30.jpg",
+        "out\\panda_qa_final\\crit_30_000.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "31-florescer-na-regiao",
+      "intervalo_s": [
+        65.2,
+        66.33333333333333
+      ],
+      "quadros": {
+        "inicio": 1956,
+        "meio": 1972,
+        "fim": 1989
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 65.2,
+        "meio": 65.733333,
+        "fim": 66.3
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "SIM",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Flores claras legíveis; rótulo de outra escala de tempo/florescimento local.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_31_33.jpg",
+        "out\\panda_qa_final\\crit_31_000.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "32-mancha-seca",
+      "intervalo_s": [
+        66.33333333333333,
+        70.03333333333333
+      ],
+      "quadros": {
+        "inicio": 1990,
+        "meio": 2044,
+        "fim": 2100
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 66.333333,
+        "meio": 68.133333,
+        "fim": 70.0
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "SIM",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Colmos locais amarelam progressivamente, bambus verdes continuam ao fundo; não representa morte global.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_31_33.jpg",
+        "out\\panda_qa_final\\crit_32_000.jpg",
+        "out\\panda_qa_final\\crit_32_048.jpg",
+        "out\\panda_qa_final\\crit_32_096.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "33-procura-outro-lugar",
+      "intervalo_s": [
+        70.03333333333333,
+        72.4
+      ],
+      "quadros": {
+        "inicio": 2101,
+        "meio": 2136,
+        "fim": 2171
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 70.033333,
+        "meio": 71.2,
+        "fim": 72.366667
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "SIM",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Panda caminha pela trilha, gira e permanece enquadrado; apoio alternado das patas sugerido pela sequência. Não equivale a assistir à marcha.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_31_33.jpg",
+        "out\\panda_qa_final\\crit_33_000.jpg",
+        "out\\panda_qa_final\\crit_33_048.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "34-chega-ao-verde",
+      "intervalo_s": [
+        72.4,
+        74.5
+      ],
+      "quadros": {
+        "inicio": 2172,
+        "meio": 2202,
+        "fim": 2234
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 72.4,
+        "meio": 73.4,
+        "fim": 74.466667
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "NÃO",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "SIM",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Chegada em área verde, novo colmo sobe, sem colmo ocultando o rosto; corte de caminhada para sentado. Mancha seca não é legível neste enquadramento.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_34_36.jpg",
+        "out\\panda_qa_final\\crit_34_000.jpg",
+        "out\\panda_qa_final\\crit_34_048.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "35-recap-polegar",
+      "intervalo_s": [
+        74.5,
+        75.73333333333333
+      ],
+      "quadros": {
+        "inicio": 2235,
+        "meio": 2252,
+        "fim": 2271
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 74.5,
+        "meio": 75.066667,
+        "fim": 75.7
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Close retoma pega/pseudopolegar externo, sem novo dedo.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_34_36.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "36-recap-mandibula",
+      "intervalo_s": [
+        75.73333333333333,
+        78.1
+      ],
+      "quadros": {
+        "inicio": 2272,
+        "meio": 2307,
+        "fim": 2342
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 75.733333,
+        "meio": 76.9,
+        "fim": 78.066667
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Mordida e fibras reaparecem no recap; sem novo esquema.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_34_36.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "37-recap-dia-comida",
+      "intervalo_s": [
+        78.1,
+        79.56666666666666
+      ],
+      "quadros": {
+        "inicio": 2343,
+        "meio": 2364,
+        "fim": 2386
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 78.1,
+        "meio": 78.8,
+        "fim": 79.533333
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Plano aberto retorna ao contexto de alimentação; recap usa novamente composição do cenário original.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_37_39.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "38-reencontra-mordida",
+      "intervalo_s": [
+        79.56666666666666,
+        83.23333333333333
+      ],
+      "quadros": {
+        "inicio": 2387,
+        "meio": 2441,
+        "fim": 2496
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 79.566667,
+        "meio": 81.366667,
+        "fim": 83.2
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "SIM",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Elevação contínua do colmo com as patas, aproximação para a abertura.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_37_39.jpg",
+        "out\\panda_qa_final\\crit_38_000.jpg",
+        "out\\panda_qa_final\\crit_38_048.jpg",
+        "out\\panda_qa_final\\crit_38_096.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    },
+    {
+      "plano": "39-loop-exato",
+      "intervalo_s": [
+        83.23333333333333,
+        85.36666666666666
+      ],
+      "quadros": {
+        "inicio": 2497,
+        "meio": 2528,
+        "fim": 2560
+      },
+      "tempos_inspecionados_s": {
+        "inicio": 83.233333,
+        "meio": 84.266667,
+        "fim": 85.333333
+      },
+      "inicio_inspecionado": "SIM",
+      "meio_inspecionado": "SIM",
+      "fim_inspecionado": "SIM",
+      "acao_prevista_integralmente_demonstrada": "SIM",
+      "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+      "sequencia_contigua_em_prancha_inspecionada": "SIM",
+      "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+      "observacao": "Pose/enquadramento retornam à abertura, sem cartela/CTA. Headline reaparece somente no primeiro quadro do reinício; emenda sonora não ouvida.",
+      "evidencias": [
+        "out\\panda_qa_final\\planos_37_39.jpg",
+        "out\\panda_qa_final\\crit_39_000.jpg",
+        "out\\panda_qa_final\\crit_39_048.jpg"
+      ],
+      "versao_das_evidencias": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4"
+    }
+  ],
+  "historico_primeira_auditoria": {
+    "status": "REPROVADO_PENDENTE_DE_CORRECAO",
+    "aprovacao_final": false,
+    "checklist_100_porcento": false,
+    "versao_auditada": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4",
+    "sha256": "0de858f13ec4a3b78d7fbb99b96f906defeb39250e28fbf67473ec7b14aba318",
+    "data": "2026-11-03",
+    "revisor": "panda_qa_final — independente do roteiro, crítica e direção",
+    "independencia": "Não escrevi/dirigi produção, não alterei código, narração ou MP4. Produzi apenas evidências e relatório de QA.",
+    "notas": {
+      "visual_material_enquadramento": 7.5,
+      "editorial_execucao_causal": 6.5,
+      "geral_desta_versao": 6.5,
+      "potencial_200mil_views": null,
+      "justificativa": "Pelo, rosto, floresta densa e variação aberto/close/esquema sustentam7,5na imagem. A cadeia física exigida da nova retirada está obstruída e há demonstrações parciais: não cabe aprovação editorial. Não atribuo probabilidade ou nota de alcance sem avaliação perceptual integral."
+    },
+    "arquivo": {
+      "file": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4",
+      "format": "mov,mp4,m4a,3gp,3g2,mj2",
+      "duration": 85.366667,
+      "size_bytes": 272330148,
+      "bitrate": 25520982,
+      "video": {
+        "codec": "h264",
+        "profile": "High",
+        "width": 1080,
+        "height": 1920,
+        "display_aspect": "9:16",
+        "fps": 30.0,
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "variable_frame_rate_suspected": false,
+        "pix_fmt": "yuv420p",
+        "bit_depth": 8,
+        "hdr": false,
+        "hdr_signal": false,
+        "hdr_format": null,
+        "dolby_vision": null,
+        "color_space": null,
+        "color_primaries": "bt709",
+        "color_transfer": "iec61966-2-1",
+        "color_range": "tv",
+        "rotation": 0,
+        "nb_frames": 2561,
+        "bitrate": 25313521
+      },
+      "audio": {
+        "codec": "aac",
+        "channels": 1,
+        "channel_layout": "mono",
+        "sample_rate": 44100,
+        "bitrate": 198593
+      },
+      "subtitle_streams": 0,
+      "data_streams": 0,
+      "chapters": [],
+      "tags": {},
+      "subtitle_stream_details": [],
+      "audio_streams": [
+        {
+          "index": 0,
+          "codec": "aac",
+          "channels": 1,
+          "channel_layout": "mono",
+          "sample_rate": 44100,
+          "language": "und",
+          "title": null
+        }
+      ]
+    },
+    "verificacao_tecnica": {
+      "status": "completed",
+      "output": null,
+      "dry_run": false,
+      "commands": [
+        "'C:\\Users\\gnnoc\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\\ffmpeg-9.0.1-full_build\\bin\\ffmpeg.EXE' -hide_banner -nostdin -i 'C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_cloud.mp4' -vn -af loudnorm=I=-14:TP=-1:LRA=11:print_format=json -f null -"
+      ],
+      "verified": false,
+      "verification": [],
+      "platform": "reels",
+      "checks": [
+        {
+          "check": "duration",
+          "status": "PASS",
+          "value": "85.37s",
+          "expected": "<= 90s",
+          "fix": "decide with the user: cut.py keeps quality but drops content; fit.py --duration speeds up (audio pitch-preserved, motion faster)",
+          "reason": "",
+          "kind": "judgement"
+        },
+        {
+          "check": "aspect",
+          "status": "PASS",
+          "value": "9:16",
+          "expected": "9:16/4:5/1:1",
+          "fix": "fit.py --aspect 9:16 --fit pad (keeps everything, adds bars) or crop (fills the frame, loses the edges: check the subject with look.py)",
+          "reason": "",
+          "kind": "judgement"
+        },
+        {
+          "check": "resolution",
+          "status": "PASS",
+          "value": "1080x1920",
+          "expected": "short side >= 1080",
+          "fix": "upscaling will not add detail; re-export from the master",
+          "reason": "",
+          "kind": "judgement"
+        },
+        {
+          "check": "fps",
+          "status": "PASS",
+          "value": "30",
+          "expected": "<= 60",
+          "fix": "fit.py --fps 30 (drops half the frames of 60 fps motion; fine for talking heads, visible on sports/gaming)",
+          "reason": "",
+          "kind": "judgement"
+        },
+        {
+          "check": "vfr",
+          "status": "PASS",
+          "value": "constant",
+          "expected": "constant",
+          "fix": "fit.py --fps N (any re-encode conforms it)",
+          "reason": "",
+          "kind": "format"
+        },
+        {
+          "check": "video codec",
+          "status": "PASS",
+          "value": "h264",
+          "expected": "h264/hevc",
+          "fix": "export.py --preset reels",
+          "reason": "",
+          "kind": "format"
+        },
+        {
+          "check": "pixel format",
+          "status": "PASS",
+          "value": "yuv420p",
+          "expected": "yuv420p (8-bit 4:2:0)",
+          "fix": "export.py preset re-encodes to yuv420p",
+          "reason": "",
+          "kind": "format"
+        },
+        {
+          "check": "colour",
+          "status": "WARN",
+          "value": "bt709/iec61966-2-1",
+          "expected": "bt709/bt709 tagged (or HDR)",
+          "fix": "color.py --retag bt709 when the picture really is 709; color.py --to-sdr when it is HDR",
+          "reason": "",
+          "kind": "format"
+        },
+        {
+          "check": "file size",
+          "status": "PASS",
+          "value": "259.7 MB",
+          "expected": "<= 4096 MB",
+          "fix": "export.py --crf 24 or lower resolution",
+          "reason": "",
+          "kind": "format"
+        },
+        {
+          "check": "audio",
+          "status": "PASS",
+          "value": "aac 1ch 44100Hz",
+          "expected": "present",
+          "fix": "",
+          "reason": "",
+          "kind": "format"
+        },
+        {
+          "check": "subtitles",
+          "status": "WARN",
+          "value": "none",
+          "expected": ">= 1 language-tagged subtitle track",
+          "fix": "caption.py video.mp4 --mode mux --srt subs.srt:en -o video_subs.mkv (streams are copied)",
+          "reason": "subtitles are optional, but they are the cheapest accessibility win a delivery has",
+          "kind": "format"
+        },
+        {
+          "check": "loudness",
+          "status": "PASS",
+          "value": "-15.5 LUFS",
+          "expected": "-14 Ã‚Â± 2 LUFS",
+          "fix": "loudness.py -I -14 for speech or music; leave ambience/near-silence (<= -40 LUFS) alone and say so",
+          "reason": "",
+          "kind": "judgement"
+        },
+        {
+          "check": "true peak",
+          "status": "PASS",
+          "value": "-1.2 dBTP",
+          "expected": "<= -1 dBTP",
+          "fix": "loudness.py --tp -1",
+          "reason": "",
+          "kind": "judgement"
+        }
+      ],
+      "failed": 0,
+      "warnings": 2,
+      "ok": true
+    },
+    "metricas_independentes": {
+      "audio": {
+        "sample_rate": 44100,
+        "samples_final": 3764641,
+        "samples_mix": 3764670,
+        "correlation_zero_lag_with_mix": 0.9999605768295798,
+        "gain_fit": 0.9988996105303675,
+        "relative_rms_error_after_gain_fit": 0.008879541423244552,
+        "scope": "Comparação técnica com pré-mix, não escuta nem prova perceptual do sincronismo."
+      },
+      "loop": {
+        "region": "x0..1079,y480..1919",
+        "mean_absolute_rgb_difference": 1.7121176268861453,
+        "fraction_channels_difference_gt10": 0.00978309327846365,
+        "scope": "MP4 comprimido: pose/enquadramento semelhantes; headline do início fora da região."
+      },
+      "sha256": "0de858f13ec4a3b78d7fbb99b96f906defeb39250e28fbf67473ec7b14aba318"
+    },
+    "cobertura": {
+      "planos": 39,
+      "pontos_inicio_meio_fim": 117,
+      "cortes_com_pares_adjacentes": 38,
+      "planos_com_sequencias_contiguas": [
+        1,
+        6,
+        9,
+        10,
+        13,
+        14,
+        15,
+        18,
+        19,
+        24,
+        27,
+        30,
+        31,
+        32,
+        33,
+        34,
+        38,
+        39
+      ],
+      "quadros_nominais_nas_sequencias": 1220,
+      "velocidade_normal_com_audio": "NÃO",
+      "escuta_humana": "NÃO"
+    },
+    "bloqueadores": [
+      {
+        "id": "QA-P24-RETIRADA",
+        "plano": 24,
+        "intervalo_s": [
+          51.2,
+          52.745
+        ],
+        "quadros": [
+          1536,
+          1582
+        ],
+        "material": true,
+        "problema": "Retirada física do segundo colmo não visível: tronco encobre mãos/pilha na fase inicial; colmo emerge já preso. Não é possível verificar a cadeia pilha→pata→colmo nem a unidade retirada.",
+        "evidencias": [
+          "out/panda_qa_final/crit_24_000.jpg",
+          "out/panda_qa_final/planos_22_24.jpg"
+        ],
+        "criterio_de_reteste": "No novo MP4, demonstrar contato da pata, retirada do mesmo colmo da pilha e elevação sem obstrução; rever plano23→24→25 e continuidade da pilha."
+      }
+    ],
+    "observacoes_nao_bloqueantes": [
+      {
+        "plano": 4,
+        "texto": "Close da boca, seguido pelo esquema; não identifiquei um fragmento sendo acompanhado até o intestino como previsto."
+      },
+      {
+        "plano": 6,
+        "texto": "Colmo já está entre as patas na posição baixa no início; a sequência comprova elevação, mas não retirada física da pilha."
+      },
+      {
+        "plano": 30,
+        "texto": "Close dos colmos/folhas locais; formação dos brotos não ficou demonstrada neste plano, flores entram no corte seguinte."
+      },
+      {
+        "plano": 34,
+        "texto": "Chegada em área verde, novo colmo sobe, sem colmo ocultando o rosto; corte de caminhada para sentado. Mancha seca não é legível neste enquadramento."
+      },
+      {
+        "plano": 1,
+        "texto": "Título abaixo da faixa superior8%da máscara reels; última letra de BOCA encosta poucos pixels na área lateral12%. Não há oclusão material superior comprovada. Conferir na prévia do app antes de publicar."
+      }
+    ],
+    "limites": [
+      "Não assisti ao MP4 em reprodução contínua em velocidade normal e não ouvi o áudio como um ouvinte humano. Ritmo, naturalidade, mascaramento da voz, cliques e sincronismo perceptual permanecem pendentes.",
+      "Início/meio/fim dos39planos foram inspecionados, com pares adjacentes fim/início nos38cortes; isso não é inspeção de todos os2561quadros.",
+      "18planos críticos receberam pranchas sequenciais de todos os quadros nominais dos intervalos, em270×480; o primeiro quadro foi extraído separadamente.16intervalos usam cópias QA cortadas com precisão de quadro, CRF24; planos30/31 foram extraídos diretamente do original quadro a quadro. Mapeamento temporal nominal pode ter tolerância de um quadro; não é laudo geométrico de todos os pixels a1080p.",
+      "Legendas queimadas foram lidas nas117amostras e nas sequências críticas; não houve OCR/conferência humana de todas as palavras e fades. A transcrição conferida fornecida é evidência anterior, não escuta minha do MP4.",
+      "Referências cadela/veado foram vistas como folhas de contato; comparação de materiais/enquadramentos é válida, mas não uma comparação de movimento ou áudio dos vídeos originais.",
+      "Sem prévia dentro do aplicativo Instagram. A máscara reels é orientação da skill, não medição da UI atual nem garantia de segurança em todos os aparelhos.",
+      "Métricas de áudio e correlação com pré-mix não substituem escuta. PubMed20814990 não retornou texto útil nesta consulta; fundamentos centrais também constam nas páginas oficiais dos zoológicos."
+    ],
+    "fontes_reconsultadas": [
+      {
+        "url": "https://nationalzoo.si.edu/animals/giant-panda",
+        "escopo": "Pseudopolegar, mandíbula/molares, digestão ineficiente,10–16h e defecação em repouso sustentados."
+      },
+      {
+        "url": "https://animals.sandiegozoo.org/animals/giant-panda",
+        "escopo": "Descascamento, cinco dedos+pseudopolegar e floração/morte conjunta local/migração sustentados."
+      },
+      {
+        "url": "https://nhm.org/press/eating-bamboo-its-all-wrist",
+        "escopo": "Sesamoide radial e compromisso funcional da pega/caminhada sustentados."
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/20814990/",
+        "escopo": "Texto não recuperado; sem nova validação desse artigo."
+      }
+    ],
+    "planos": [
+      {
+        "plano": "01-mordida-gancho",
+        "intervalo_s": [
+          0.0,
+          2.466666666666667
+        ],
+        "quadros": {
+          "inicio": 0,
+          "meio": 36,
+          "fim": 73
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 0.0,
+          "meio": 1.2,
+          "fim": 2.433333
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "SIM",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Panda, colmo, boca e floresta já presentes; headline legível; os quadros sequenciais mostram pequena mastigação e variação de câmera.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_01_03.jpg",
+          "out\\panda_qa_final\\crit_01_000.jpg",
+          "out\\panda_qa_final\\crit_01_048.jpg"
+        ]
+      },
+      {
+        "plano": "02-identidade-floresta",
+        "intervalo_s": [
+          2.466666666666667,
+          3.6
+        ],
+        "quadros": {
+          "inicio": 74,
+          "meio": 90,
+          "fim": 107
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 2.466667,
+          "meio": 3.0,
+          "fim": 3.566667
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Revelação de corpo e floresta; identificação PANDA/Ailuropoda melanoleuca legível.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_01_03.jpg"
+        ]
+      },
+      {
+        "plano": "03-mesmo-bambu",
+        "intervalo_s": [
+          3.6,
+          5.9
+        ],
+        "quadros": {
+          "inicio": 108,
+          "meio": 141,
+          "fim": 176
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 3.6,
+          "meio": 4.7,
+          "fim": 5.866667
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Mesmo animal e colmo; contracampo preserva relação pata/boca.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_01_03.jpg"
+        ]
+      },
+      {
+        "plano": "04-boca-ao-intestino",
+        "intervalo_s": [
+          5.9,
+          7.166666666666667
+        ],
+        "quadros": {
+          "inicio": 177,
+          "meio": 195,
+          "fim": 214
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 5.9,
+          "meio": 6.5,
+          "fim": 7.133333
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "NÃO",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Close da boca, seguido pelo esquema; não identifiquei um fragmento sendo acompanhado até o intestino como previsto.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_04_06.jpg"
+        ]
+      },
+      {
+        "plano": "05-intestino-ancestral",
+        "intervalo_s": [
+          7.166666666666667,
+          8.9
+        ],
+        "quadros": {
+          "inicio": 215,
+          "meio": 240,
+          "fim": 266
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 7.166667,
+          "meio": 8.0,
+          "fim": 8.866667
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Esquema digestivo inteiro e rotulado sem escala; nenhuma transformação em outro animal.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_04_06.jpg"
+        ]
+      },
+      {
+        "plano": "06-pata-pega-colmo",
+        "intervalo_s": [
+          8.9,
+          11.9
+        ],
+        "quadros": {
+          "inicio": 267,
+          "meio": 311,
+          "fim": 356
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 8.9,
+          "meio": 10.366667,
+          "fim": 11.866667
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "NÃO",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "SIM",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Colmo já está entre as patas na posição baixa no início; a sequência comprova elevação, mas não retirada física da pilha.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_04_06.jpg",
+          "out\\panda_qa_final\\crit_06_000.jpg",
+          "out\\panda_qa_final\\crit_06_048.jpg"
+        ]
+      },
+      {
+        "plano": "07-pata-real",
+        "intervalo_s": [
+          11.9,
+          13.0
+        ],
+        "quadros": {
+          "inicio": 357,
+          "meio": 373,
+          "fim": 389
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 11.9,
+          "meio": 12.433333,
+          "fim": 12.966667
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Patas/unhas e apoio lateral legíveis; contato com colmo mantido nas amostras.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_07_09.jpg"
+        ]
+      },
+      {
+        "plano": "08-parece-sexto-dedo",
+        "intervalo_s": [
+          13.0,
+          15.2
+        ],
+        "quadros": {
+          "inicio": 390,
+          "meio": 422,
+          "fim": 455
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 13.0,
+          "meio": 14.066667,
+          "fim": 15.166667
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Contracampo do punho, sem sexto dedo humano independente visível.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_07_09.jpg"
+        ]
+      },
+      {
+        "plano": "09-osso-do-punho",
+        "intervalo_s": [
+          15.2,
+          16.866666666666667
+        ],
+        "quadros": {
+          "inicio": 456,
+          "meio": 480,
+          "fim": 505
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 15.2,
+          "meio": 16.0,
+          "fim": 16.833333
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "SIM",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Cinco raios digitais e saliência lateral destacada no esquema local; giro contínuo.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_07_09.jpg",
+          "out\\panda_qa_final\\crit_09_000.jpg",
+          "out\\panda_qa_final\\crit_09_048.jpg"
+        ]
+      },
+      {
+        "plano": "10-pegada-leva-a-boca",
+        "intervalo_s": [
+          16.866666666666667,
+          19.666666666666668
+        ],
+        "quadros": {
+          "inicio": 506,
+          "meio": 547,
+          "fim": 589
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 16.866667,
+          "meio": 18.233333,
+          "fim": 19.633333
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "SIM",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Colmo sobe com as patas até a boca; sequência contínua, sem salto grosseiro de posição identificado.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_10_12.jpg",
+          "out\\panda_qa_final\\crit_10_000.jpg",
+          "out\\panda_qa_final\\crit_10_048.jpg"
+        ]
+      },
+      {
+        "plano": "11-polegar-de-araque",
+        "intervalo_s": [
+          19.666666666666668,
+          20.333333333333332
+        ],
+        "quadros": {
+          "inicio": 590,
+          "meio": 599,
+          "fim": 609
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 19.666667,
+          "meio": 19.966667,
+          "fim": 20.3
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Pega/mordida e label POLEGAR DE ARAQUE legíveis; plano curto.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_10_12.jpg"
+        ]
+      },
+      {
+        "plano": "12-bambu-preso",
+        "intervalo_s": [
+          20.333333333333332,
+          22.433333333333334
+        ],
+        "quadros": {
+          "inicio": 610,
+          "meio": 640,
+          "fim": 672
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 20.333333,
+          "meio": 21.333333,
+          "fim": 22.4
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Colmo entre patas e região dos dentes; enquadramento permite ver contato.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_10_12.jpg"
+        ]
+      },
+      {
+        "plano": "13-casca-cai",
+        "intervalo_s": [
+          22.433333333333334,
+          23.7
+        ],
+        "quadros": {
+          "inicio": 673,
+          "meio": 691,
+          "fim": 710
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 22.433333,
+          "meio": 23.033333,
+          "fim": 23.666667
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "SIM",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Faixa interna clara aparece no colmo; tiras se desprendem e caem na sequência.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_13_15.jpg",
+          "out\\panda_qa_final\\crit_13_000.jpg"
+        ]
+      },
+      {
+        "plano": "14-esmaga-parte-clara",
+        "intervalo_s": [
+          23.7,
+          25.333333333333332
+        ],
+        "quadros": {
+          "inicio": 711,
+          "meio": 735,
+          "fim": 759
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 23.7,
+          "meio": 24.5,
+          "fim": 25.3
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "SIM",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Parte clara e fibras visíveis; mastigação pequena. A prancha não demonstra fluidez em velocidade normal.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_13_15.jpg",
+          "out\\panda_qa_final\\crit_14_000.jpg",
+          "out\\panda_qa_final\\crit_14_048.jpg"
+        ]
+      },
+      {
+        "plano": "15-molares-e-musculos",
+        "intervalo_s": [
+          25.333333333333332,
+          27.866666666666667
+        ],
+        "quadros": {
+          "inicio": 760,
+          "meio": 797,
+          "fim": 835
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 25.333333,
+          "meio": 26.566667,
+          "fim": 27.833333
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "SIM",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Janela dos dentes/músculos inteira e sem escala; mandíbula abre/fecha na sequência.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_13_15.jpg",
+          "out\\panda_qa_final\\crit_15_000.jpg",
+          "out\\panda_qa_final\\crit_15_048.jpg"
+        ]
+      },
+      {
+        "plano": "16-triturador",
+        "intervalo_s": [
+          27.866666666666667,
+          32.0
+        ],
+        "quadros": {
+          "inicio": 836,
+          "meio": 897,
+          "fim": 959
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 27.866667,
+          "meio": 29.9,
+          "fim": 31.966667
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Retorno à alimentação, fibras no chão e label TRITURADOR; sem cartaz final.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_16_18.jpg"
+        ]
+      },
+      {
+        "plano": "17-triturar-nao-basta",
+        "intervalo_s": [
+          32.0,
+          35.3
+        ],
+        "quadros": {
+          "inicio": 960,
+          "meio": 1009,
+          "fim": 1058
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 32.0,
+          "meio": 33.633333,
+          "fim": 35.266667
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Alimentação/descartes visíveis; mudança de enquadramento para introduzir digestão.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_16_18.jpg"
+        ]
+      },
+      {
+        "plano": "18-nutrientes-e-fibra",
+        "intervalo_s": [
+          35.3,
+          38.1
+        ],
+        "quadros": {
+          "inicio": 1059,
+          "meio": 1100,
+          "fim": 1142
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 35.3,
+          "meio": 36.666667,
+          "fim": 38.066667
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "SIM",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Dourado sai do tubo e fibra permanece em trânsito; rótulo das cores evita afirmar ausência total de digestão.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_16_18.jpg",
+          "out\\panda_qa_final\\crit_18_000.jpg",
+          "out\\panda_qa_final\\crit_18_048.jpg"
+        ]
+      },
+      {
+        "plano": "19-fibra-no-residuo",
+        "intervalo_s": [
+          38.1,
+          41.2
+        ],
+        "quadros": {
+          "inicio": 1143,
+          "meio": 1189,
+          "fim": 1235
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 38.1,
+          "meio": 39.633333,
+          "fim": 41.166667
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "SIM",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Dejeto estilizado com fibras junto à pata, desobstruído; passagem do esquema ao chão é corte sem acompanhamento do mesmo fragmento.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_19_21.jpg",
+          "out\\panda_qa_final\\crit_19_000.jpg",
+          "out\\panda_qa_final\\crit_19_048.jpg"
+        ]
+      },
+      {
+        "plano": "20-trabalho-duplo",
+        "intervalo_s": [
+          41.2,
+          43.43333333333333
+        ],
+        "quadros": {
+          "inicio": 1236,
+          "meio": 1269,
+          "fim": 1302
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 41.2,
+          "meio": 42.3,
+          "fim": 43.4
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Plano aberto mostra boca e dejeto simultaneamente; continuidade local com19.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_19_21.jpg"
+        ]
+      },
+      {
+        "plano": "21-come-muito",
+        "intervalo_s": [
+          43.43333333333333,
+          46.6
+        ],
+        "quadros": {
+          "inicio": 1303,
+          "meio": 1350,
+          "fim": 1397
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 43.433333,
+          "meio": 45.0,
+          "fim": 46.566667
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Floresta, panda, pilha e descartes; dejeto antes frontal deixa de ser visível. Não atribuí erro geométrico só pela mudança de plano.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_19_21.jpg"
+        ]
+      },
+      {
+        "plano": "22-metade-do-dia",
+        "intervalo_s": [
+          46.6,
+          47.46666666666667
+        ],
+        "quadros": {
+          "inicio": 1398,
+          "meio": 1410,
+          "fim": 1423
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 46.6,
+          "meio": 47.0,
+          "fim": 47.433333
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "10–16H com indicação VARIA, panda alimentando-se; duração de0,88s isolada, faixa permanece nos planos seguintes.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_22_24.jpg"
+        ]
+      },
+      {
+        "plano": "23-procura-na-pilha",
+        "intervalo_s": [
+          47.46666666666667,
+          51.2
+        ],
+        "quadros": {
+          "inicio": 1424,
+          "meio": 1479,
+          "fim": 1535
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 47.466667,
+          "meio": 49.3,
+          "fim": 51.166667
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Panda quadrúpede se aproxima da pilha; chão e patas legíveis nas três amostras. Movimento normal não assistido.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_22_24.jpg"
+        ]
+      },
+      {
+        "plano": "24-pega-outro-colmo",
+        "intervalo_s": [
+          51.2,
+          52.766666666666666
+        ],
+        "quadros": {
+          "inicio": 1536,
+          "meio": 1558,
+          "fim": 1582
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 51.2,
+          "meio": 51.933333,
+          "fim": 52.733333
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "NÃO",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "SIM",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "BLOQUEADOR: tronco cobre mãos/base e a pilha na fase inicial; depois o colmo sobe. Não se vê contato da retirada nem uma unidade sair da pilha.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_22_24.jpg",
+          "out\\panda_qa_final\\crit_24_000.jpg"
+        ]
+      },
+      {
+        "plano": "25-almoco-expediente",
+        "intervalo_s": [
+          52.766666666666666,
+          53.733333333333334
+        ],
+        "quadros": {
+          "inicio": 1583,
+          "meio": 1597,
+          "fim": 1611
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 52.766667,
+          "meio": 53.233333,
+          "fim": 53.7
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Retorno à mordida e EXPEDIENTE; descartes presentes.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_25_27.jpg"
+        ]
+      },
+      {
+        "plano": "26-repouso-no-tronco",
+        "intervalo_s": [
+          53.733333333333334,
+          57.8
+        ],
+        "quadros": {
+          "inicio": 1612,
+          "meio": 1672,
+          "fim": 1733
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 53.733333,
+          "meio": 55.733333,
+          "fim": 57.766667
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Repouso junto ao tronco estabelecido; sem colmo na boca; nenhuma mastigação identificada nas amostras.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_25_27.jpg"
+        ]
+      },
+      {
+        "plano": "27-repouso-dejeto-novo",
+        "intervalo_s": [
+          57.8,
+          59.733333333333334
+        ],
+        "quadros": {
+          "inicio": 1734,
+          "meio": 1762,
+          "fim": 1791
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 57.8,
+          "meio": 58.733333,
+          "fim": 59.7
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "SIM",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Dejetos passam de dois volumes para três por crescimento gradual; aparecem ao lado posterior, sem gore. A animação é estilizada, não queda anatômica realista.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_25_27.jpg",
+          "out\\panda_qa_final\\crit_27_000.jpg",
+          "out\\panda_qa_final\\crit_27_048.jpg"
+        ]
+      },
+      {
+        "plano": "28-boca-fecha-servico-segue",
+        "intervalo_s": [
+          59.733333333333334,
+          61.03333333333333
+        ],
+        "quadros": {
+          "inicio": 1792,
+          "meio": 1810,
+          "fim": 1830
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 59.733333,
+          "meio": 60.333333,
+          "fim": 61.0
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Reação pequena do corpo, boca fechada e contexto de repouso preservado nas amostras.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_28_30.jpg"
+        ]
+      },
+      {
+        "plano": "29-cardapio-local",
+        "intervalo_s": [
+          61.03333333333333,
+          64.4
+        ],
+        "quadros": {
+          "inicio": 1831,
+          "meio": 1881,
+          "fim": 1931
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 61.033333,
+          "meio": 62.7,
+          "fim": 64.366667
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Mancha/cenário verde e cardápio introduzidos; novo plano aberto.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_28_30.jpg"
+        ]
+      },
+      {
+        "plano": "30-especie-da-mancha",
+        "intervalo_s": [
+          64.4,
+          65.2
+        ],
+        "quadros": {
+          "inicio": 1932,
+          "meio": 1943,
+          "fim": 1955
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 64.4,
+          "meio": 64.766667,
+          "fim": 65.166667
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "NÃO",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "SIM",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Close dos colmos/folhas locais; formação dos brotos não ficou demonstrada neste plano, flores entram no corte seguinte.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_28_30.jpg",
+          "out\\panda_qa_final\\crit_30_000.jpg"
+        ]
+      },
+      {
+        "plano": "31-florescer-na-regiao",
+        "intervalo_s": [
+          65.2,
+          66.33333333333333
+        ],
+        "quadros": {
+          "inicio": 1956,
+          "meio": 1972,
+          "fim": 1989
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 65.2,
+          "meio": 65.733333,
+          "fim": 66.3
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "SIM",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Flores claras legíveis; rótulo de outra escala de tempo/florescimento local.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_31_33.jpg",
+          "out\\panda_qa_final\\crit_31_000.jpg"
+        ]
+      },
+      {
+        "plano": "32-mancha-seca",
+        "intervalo_s": [
+          66.33333333333333,
+          70.03333333333333
+        ],
+        "quadros": {
+          "inicio": 1990,
+          "meio": 2044,
+          "fim": 2100
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 66.333333,
+          "meio": 68.133333,
+          "fim": 70.0
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "SIM",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Colmos locais amarelam progressivamente, bambus verdes continuam ao fundo; não representa morte global.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_31_33.jpg",
+          "out\\panda_qa_final\\crit_32_000.jpg",
+          "out\\panda_qa_final\\crit_32_048.jpg",
+          "out\\panda_qa_final\\crit_32_096.jpg"
+        ]
+      },
+      {
+        "plano": "33-procura-outro-lugar",
+        "intervalo_s": [
+          70.03333333333333,
+          72.4
+        ],
+        "quadros": {
+          "inicio": 2101,
+          "meio": 2136,
+          "fim": 2171
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 70.033333,
+          "meio": 71.2,
+          "fim": 72.366667
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "SIM",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Panda caminha pela trilha, gira e permanece enquadrado; apoio alternado das patas sugerido pela sequência. Não equivale a assistir à marcha.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_31_33.jpg",
+          "out\\panda_qa_final\\crit_33_000.jpg",
+          "out\\panda_qa_final\\crit_33_048.jpg"
+        ]
+      },
+      {
+        "plano": "34-chega-ao-verde",
+        "intervalo_s": [
+          72.4,
+          74.5
+        ],
+        "quadros": {
+          "inicio": 2172,
+          "meio": 2202,
+          "fim": 2234
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 72.4,
+          "meio": 73.4,
+          "fim": 74.466667
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "NÃO",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "SIM",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Chegada em área verde, novo colmo sobe, sem colmo ocultando o rosto; corte de caminhada para sentado. Mancha seca não é legível neste enquadramento.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_34_36.jpg",
+          "out\\panda_qa_final\\crit_34_000.jpg",
+          "out\\panda_qa_final\\crit_34_048.jpg"
+        ]
+      },
+      {
+        "plano": "35-recap-polegar",
+        "intervalo_s": [
+          74.5,
+          75.73333333333333
+        ],
+        "quadros": {
+          "inicio": 2235,
+          "meio": 2252,
+          "fim": 2271
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 74.5,
+          "meio": 75.066667,
+          "fim": 75.7
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Close retoma pega/pseudopolegar externo, sem novo dedo.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_34_36.jpg"
+        ]
+      },
+      {
+        "plano": "36-recap-mandibula",
+        "intervalo_s": [
+          75.73333333333333,
+          78.1
+        ],
+        "quadros": {
+          "inicio": 2272,
+          "meio": 2307,
+          "fim": 2342
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 75.733333,
+          "meio": 76.9,
+          "fim": 78.066667
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Mordida e fibras reaparecem no recap; sem novo esquema.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_34_36.jpg"
+        ]
+      },
+      {
+        "plano": "37-recap-dia-comida",
+        "intervalo_s": [
+          78.1,
+          79.56666666666666
+        ],
+        "quadros": {
+          "inicio": 2343,
+          "meio": 2364,
+          "fim": 2386
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 78.1,
+          "meio": 78.8,
+          "fim": 79.533333
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "NÃO",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Plano aberto retorna ao contexto de alimentação; recap usa novamente composição do cenário original.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_37_39.jpg"
+        ]
+      },
+      {
+        "plano": "38-reencontra-mordida",
+        "intervalo_s": [
+          79.56666666666666,
+          83.23333333333333
+        ],
+        "quadros": {
+          "inicio": 2387,
+          "meio": 2441,
+          "fim": 2496
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 79.566667,
+          "meio": 81.366667,
+          "fim": 83.2
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "SIM",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Elevação contínua do colmo com as patas, aproximação para a abertura.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_37_39.jpg",
+          "out\\panda_qa_final\\crit_38_000.jpg",
+          "out\\panda_qa_final\\crit_38_048.jpg",
+          "out\\panda_qa_final\\crit_38_096.jpg"
+        ]
+      },
+      {
+        "plano": "39-loop-exato",
+        "intervalo_s": [
+          83.23333333333333,
+          85.36666666666666
+        ],
+        "quadros": {
+          "inicio": 2497,
+          "meio": 2528,
+          "fim": 2560
+        },
+        "tempos_inspecionados_s": {
+          "inicio": 83.233333,
+          "meio": 84.266667,
+          "fim": 85.333333
+        },
+        "inicio_inspecionado": "SIM",
+        "meio_inspecionado": "SIM",
+        "fim_inspecionado": "SIM",
+        "acao_prevista_integralmente_demonstrada": "SIM",
+        "escopo_do_sim": "Leitura visual nas evidências indicadas; não aprovação integral de movimento/áudio.",
+        "sequencia_contigua_em_prancha_inspecionada": "SIM",
+        "movimento_velocidade_normal_com_audio_verificado": "NÃO",
+        "observacao": "Pose/enquadramento retornam à abertura, sem cartela/CTA. Headline reaparece somente no primeiro quadro do reinício; emenda sonora não ouvida.",
+        "evidencias": [
+          "out\\panda_qa_final\\planos_37_39.jpg",
+          "out\\panda_qa_final\\crit_39_000.jpg",
+          "out\\panda_qa_final\\crit_39_048.jpg"
+        ]
+      }
+    ]
+  },
+  "aprovacao_reteste_visual": true,
+  "escopo_aprovacao": "Aprovação da correção visual material24 e regressão técnica/loop; não aprovação perceptual integral de áudio e reprodução contínua.",
+  "bloqueadores_resolvidos": [
+    {
+      "id": "QA-P24-RETIRADA",
+      "resolvido": true,
+      "versao": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_corrected.mp4",
+      "intervalo_s": [
+        51.2,
+        52.766667
+      ],
+      "quadros": [
+        1536,
+        1582
+      ],
+      "evidencias": [
+        "out\\panda_qa_corrected\\plan_23_000.jpg",
+        "out\\panda_qa_corrected\\plan_24_000.jpg",
+        "out\\panda_qa_corrected\\plan_24_018.jpg",
+        "out\\panda_qa_corrected\\plan_24_036.jpg",
+        "out\\panda_qa_corrected\\plan_25_000.jpg",
+        "out\\panda_qa_corrected\\loop_compare.jpg"
+      ],
+      "observacao": "Enquadramento lateral deixa a pilha, contato baixo das patas e colmo legíveis; mesmo colmo se afasta da pilha e sobe continuamente até a boca. A pilha perde uma unidade por volta de52s/f1560. O tronco fica à esquerda e não esconde a ação. Contato inicial já está estabelecido no primeiro quadro do plano; não interpreto como filmagem naturalista de dedos fechando um por um."
+    }
+  ],
+  "adendo_correcao": {
+    "data": "2026-11-03",
+    "tipo": "QA de regressão independente",
+    "veredito": "CORRECAO_VISUAL_APROVADA",
+    "planos_inspecionados": [
+      23,
+      24,
+      25
+    ],
+    "pontos_inicio_meio_fim": [
+      23,
+      25
+    ],
+    "sequencia_plano24": "47quadros consecutivos diretamente do MP4 corrigido, f1536–1582, em540×960; pranchas de270×480.",
+    "cortes_inspecionados": [
+      [
+        1535,
+        1536
+      ],
+      [
+        1582,
+        1583
+      ]
+    ],
+    "resolucao": {
+      "id": "QA-P24-RETIRADA",
+      "resolvido": true,
+      "versao": "C:\\Users\\gnnoc\\Documents\\Canais 3d - Esse Treco\\06_Projeto Remotion (codigo-fonte)\\essetreco-codex\\out\\panda_render_corrected.mp4",
+      "intervalo_s": [
+        51.2,
+        52.766667
+      ],
+      "quadros": [
+        1536,
+        1582
+      ],
+      "evidencias": [
+        "out\\panda_qa_corrected\\plan_23_000.jpg",
+        "out\\panda_qa_corrected\\plan_24_000.jpg",
+        "out\\panda_qa_corrected\\plan_24_018.jpg",
+        "out\\panda_qa_corrected\\plan_24_036.jpg",
+        "out\\panda_qa_corrected\\plan_25_000.jpg",
+        "out\\panda_qa_corrected\\loop_compare.jpg"
+      ],
+      "observacao": "Enquadramento lateral deixa a pilha, contato baixo das patas e colmo legíveis; mesmo colmo se afasta da pilha e sobe continuamente até a boca. A pilha perde uma unidade por volta de52s/f1560. O tronco fica à esquerda e não esconde a ação. Contato inicial já está estabelecido no primeiro quadro do plano; não interpreto como filmagem naturalista de dedos fechando um por um."
+    },
+    "regressao_tecnica": "85,366667s/2561quadros/1080×1920/30fps/H.264/yuv420p/AACmono44,1kHz preservados. −15,5LUFS e−1,2dBTP. Mesmo áudioPCM, byte a byte.0FAIL/2WARNanteriores persistem.",
+    "loop": "Primeiro/último quadro vistos e medidos; diferença média RGB1,7149/255 abaixo dey480, comparada a1,7121na versão anterior: sem regressão visual material constatada. Headline reaparece no reinício, como antes.",
+    "limite": "Não reinspecionei os39planos integralmente neste reteste; primeira auditoria permanece como histórico. Não ouvi o áudio nem assisti a reprodução normal. Não houve publicação ou alteração de produção.",
+    "evidencias": [
+      "out\\panda_qa_corrected\\plan_23_000.jpg",
+      "out\\panda_qa_corrected\\plan_24_000.jpg",
+      "out\\panda_qa_corrected\\plan_24_018.jpg",
+      "out\\panda_qa_corrected\\plan_24_036.jpg",
+      "out\\panda_qa_corrected\\plan_25_000.jpg",
+      "out\\panda_qa_corrected\\loop_compare.jpg"
+    ]
+  }
+}

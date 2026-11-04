@@ -1,6 +1,6 @@
 {
   "video": "panda",
-  "status": "narração real alinhada; direção em três rodadas visuais",
+  "status": "MP4 corrigido entregue; QA independente aprovou o reteste visual com limites perceptuais documentados",
   "gancho_usuario": "Você cai de boca no bambu.",
   "roteiro": "roteiros/panda.json",
   "storyboard": "docs/panda/ROTEIRO_V1.md",
@@ -9,17 +9,19 @@
     "nota_minima_por_criterio": 8,
     "status": "aprovado pelo crítico, todas as notas >=8"
   },
-  "rodadas_visuais": [],
+  "rodadas_visuais": ["R1", "R2", "R3", "correção pós-QA no plano24"],
   "qa_final": {
-    "status": "nao iniciado",
+    "status": "APROVADO_NO_RETESTE_VISUAL_COM_LIMITES_PERCEPTUAIS",
     "revisor": "novo agente independente da produção e da crítica inicial",
     "nota_minima": 7,
-    "checklist": "100% com evidências"
+    "checklist": "39 planos e correção do plano24 documentados em docs/panda/QA_FINAL.*; reprodução normal e escuta humana não alegadas"
   },
   "voz_gerada": true,
-  "render_iniciado": false,
+  "render_iniciado": true,
   "aprovacao_usuario": "pode dale —03/11/2026",
   "narracao": "docs/panda/NARRACAO_FISH.json",
   "checagem_voz": "9cenas conferidas por ASR sem roteiro;similaridade>=.994",
-  "render_teste": "https://github.com/croonos97/essetreco/actions/runs/41714077533"
+  "render_teste": "https://github.com/croonos97/essetreco/actions/runs/41714077533",
+  "render_final": "https://github.com/croonos97/essetreco/actions/runs/41757701804",
+  "qa_relatorio": "docs/panda/QA_FINAL.md"
 }
