@@ -62,7 +62,7 @@ add('20-trabalho-duplo', WORK, S('rotina'), [2.2, 1.38, 3.3], [0, .72, .2], t =>
 add('21-come-muito', S('rotina'), HALF, WIDE, [0, .7, .05], t => <Comendo t={t} consumed={4} peel={.8}/>);
 add('22-metade-do-dia', HALF, SEEK, [3.6, 2.1, 4.7], [0, .65, -.05], t => <Comendo t={t} consumed={5} peel={.9}/>);
 add('23-procura-na-pilha', SEEK, ANOTHER, [2.4, 1.35, 3.3], [0, .65, .25], t => <><Panda t={t} pose="walk" bamboo={false} position={[0, 0, mix(-.3, 0, suave(t, SEEK, ANOTHER))]}/><group position={[-.25, 0, .65]}><PilhaBambu t={t} consumed={5}/></group><Residuos count={19}/></>);
-add('24-pega-outro-colmo', ANOTHER, SHIFT, [-1.65, 1.5, 2.9], [0, .82, .4], t => <Comendo t={t} consumed={6} reach={suave(t, ANOTHER, SHIFT)}/>);
+add('24-pega-outro-colmo', ANOTHER, SHIFT, [2.4, 1.2, 2.8], [-.2, .45, .65], t => <Comendo t={t} consumed={5 + Math.floor(suave(t, ANOTHER, SHIFT) * 2)} reach={suave(t, ANOTHER, SHIFT)}/>);
 add('25-almoco-expediente', SHIFT, S('descanso'), CAM0, LOOK0, t => <Comendo t={t} consumed={6}/>);
 add('26-repouso-no-tronco', S('descanso'), POOP, [-3, 1.5, 3.6], [-.9, .65, .65], t => <Descansando t={t}/>);
 add('27-repouso-dejeto-novo', POOP, SERVICE, [-.15, 1.7, -1.3], [-1.45, .35, .4], t => <Descansando t={t} fresh={suave(t, POOP, SERVICE)}/>);
