@@ -23,7 +23,7 @@ export function Dejetos({amount = 1, fresh = 0, position = [-.65, 0, -.35]}: {am
   return <group position={position}>
     {Array.from({length: amount + (fresh > 0 ? 1 : 0)}, (_, i) => {
       const scale = i === amount ? sm(fresh) : 1;
-      return <group key={i} position={[(i % 3) * .18, .055 * scale, Math.floor(i / 3) * .14]} rotation={[0, i * 1.8, 0]} scale={scale}>
+      return <group key={i} position={[-(i % 3) * .13, .055 * scale, Math.floor(i / 3) * .14]} rotation={[0, i * 1.8, 0]} scale={scale}>
         <mesh scale={[.09, .057, .17]} castShadow><sphereGeometry args={[1, 16, 10]}/><meshStandardMaterial color="#829251" roughness={1}/></mesh>
         {Array.from({length: 7}, (_, j) => <mesh key={j} position={[Math.sin(j * 4) * .058, .035 + Math.cos(j) * .01, Math.cos(j * 3) * .11]} rotation={[.4, j * 1.2, .8]}><capsuleGeometry args={[.004, .04, 3, 5]}/><meshStandardMaterial color="#c0b776" roughness={1}/></mesh>)}
       </group>;
@@ -56,12 +56,13 @@ export function Digestivo({t, absorption = 0}: {t: number; absorption?: number})
 export function Descansando({t, fresh = 0}: {t: number; fresh?: number}) {
   return <group position={[-.9, 0, .8]} rotation={[0, -.3, 0]}>
     <Panda t={t} pose="rest" chew={0} mouthOpen={0} bamboo={false}/>
-    <Dejetos amount={2} fresh={fresh} position={[-.48, 0, -.37]}/>
+    <Dejetos amount={2} fresh={fresh} position={[-.55, 0, -.55]}/>
     <Residuos count={12}/>
   </group>;
 }
 
 export function Caminhando({t, from, to}: {t: number; from: number; to: number}) {
   const k = suave(t, from, to);
-  return <Panda t={t} pose="walk" bamboo={false} position={[mix(.1, 3.6, k), 0, mix(.1, -4.8, k)]} rotation={[0, 2.55, 0]}/>;
+  const turn = sm(clamp01((k - .8) / .2));
+  return <Panda t={t} pose="walk" bamboo={false} position={[mix(.1, 2.7, k), 0, mix(.1, -4.8, k)]} rotation={[0, mix(2.65, 0, turn), 0]}/>;
 }

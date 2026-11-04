@@ -2,7 +2,7 @@
 
 Gancho escolhido pelo usuário: **VOCÊ CAI DE BOCA NO BAMBU.**
 
-Status: rascunho; aguarda crítica independente e aprovação do texto antes de gastar voz/render. Estimativa de duração depende da narração real; não cravar tempos por palavra antes do áudio.
+Status: aprovado pelo crítico independente (todas notas >=8) e pelo usuário em03/11/2026: “pode dale”. Polimento da cena9 aplicado; narração Fish gerada conforme aprovado. Estimativa de duração depende da narração real; não cravar tempos por palavra antes do áudio.
 
 ## 1 · gancho
 

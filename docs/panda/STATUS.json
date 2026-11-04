@@ -19,5 +19,7 @@
   "voz_gerada": true,
   "render_iniciado": false,
   "aprovacao_usuario": "pode dale —03/11/2026",
-  "narracao": "docs/panda/NARRACAO_FISH.json"
+  "narracao": "docs/panda/NARRACAO_FISH.json",
+  "checagem_voz": "9cenas conferidas por ASR sem roteiro;similaridade>=.994",
+  "render_teste": "https://github.com/croonos97/essetreco/actions/runs/41714077533"
 }

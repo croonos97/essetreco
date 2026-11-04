@@ -14,7 +14,13 @@
         "inicio": 0,
         "meio": 36,
         "fim": 73
-      }
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/01-mordida-gancho_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "02-identidade-floresta",
@@ -25,7 +31,13 @@
         "inicio": 74,
         "meio": 90,
         "fim": 107
-      }
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/02-identidade-floresta_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "03-mesmo-bambu",
@@ -36,29 +48,47 @@
         "inicio": 108,
         "meio": 141,
         "fim": 176
-      }
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/03-mesmo-bambu_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "04-boca-ao-intestino",
       "from": 5.869,
-      "to": 7.969,
+      "to": 7.149,
       "scheme": false,
       "frames": {
         "inicio": 177,
-        "meio": 207,
-        "fim": 239
-      }
+        "meio": 195,
+        "fim": 214
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/04-boca-ao-intestino_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "05-intestino-ancestral",
-      "from": 7.969,
+      "from": 7.149,
       "to": 8.894,
       "scheme": true,
       "frames": {
-        "inicio": 240,
-        "meio": 252,
+        "inicio": 215,
+        "meio": 240,
         "fim": 266
-      }
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/05-intestino-ancestral_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "06-pata-pega-colmo",
@@ -69,7 +99,13 @@
         "inicio": 267,
         "meio": 311,
         "fim": 356
-      }
+      },
+      "evidencias": {
+        "inicio": "out/panda_direcao_r3/06-pata-pega-colmo_inicio.jpg",
+        "meio": "out/panda_direcao_r3/06-pata-pega-colmo_meio.jpg",
+        "fim": "out/panda_direcao_r3/06-pata-pega-colmo_fim.jpg"
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "07-pata-real",
@@ -80,7 +116,13 @@
         "inicio": 357,
         "meio": 373,
         "fim": 389
-      }
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/07-pata-real_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "08-parece-sexto-dedo",
@@ -91,7 +133,13 @@
         "inicio": 390,
         "meio": 422,
         "fim": 455
-      }
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/08-parece-sexto-dedo_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "09-osso-do-punho",
@@ -102,7 +150,13 @@
         "inicio": 456,
         "meio": 480,
         "fim": 505
-      }
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/09-osso-do-punho_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "10-pegada-leva-a-boca",
@@ -113,7 +167,13 @@
         "inicio": 506,
         "meio": 547,
         "fim": 589
-      }
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/10-pegada-leva-a-boca_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "11-polegar-de-araque",
@@ -124,7 +184,13 @@
         "inicio": 590,
         "meio": 599,
         "fim": 609
-      }
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/11-polegar-de-araque_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "12-bambu-preso",
@@ -135,7 +201,13 @@
         "inicio": 610,
         "meio": 640,
         "fim": 672
-      }
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/12-bambu-preso_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "13-casca-cai",
@@ -146,7 +218,13 @@
         "inicio": 673,
         "meio": 691,
         "fim": 710
-      }
+      },
+      "evidencias": {
+        "inicio": "out/panda_direcao_r3/13-casca-cai_inicio.jpg",
+        "meio": "out/panda_direcao_r3/13-casca-cai_meio.jpg",
+        "fim": "out/panda_direcao_r3/13-casca-cai_fim.jpg"
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "14-esmaga-parte-clara",
@@ -157,7 +235,13 @@
         "inicio": 711,
         "meio": 735,
         "fim": 759
-      }
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/14-esmaga-parte-clara_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "15-molares-e-musculos",
@@ -168,7 +252,13 @@
         "inicio": 760,
         "meio": 797,
         "fim": 835
-      }
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/15-molares-e-musculos_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "16-triturador",
@@ -179,7 +269,13 @@
         "inicio": 836,
         "meio": 897,
         "fim": 959
-      }
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/16-triturador_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "17-triturar-nao-basta",
@@ -190,7 +286,13 @@
         "inicio": 960,
         "meio": 1009,
         "fim": 1058
-      }
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/17-triturar-nao-basta_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "18-nutrientes-e-fibra",
@@ -201,7 +303,13 @@
         "inicio": 1059,
         "meio": 1100,
         "fim": 1142
-      }
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/18-nutrientes-e-fibra_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "19-fibra-no-residuo",
@@ -212,7 +320,13 @@
         "inicio": 1143,
         "meio": 1189,
         "fim": 1235
-      }
+      },
+      "evidencias": {
+        "inicio": "out/panda_direcao_r3/19-fibra-no-residuo_inicio.jpg",
+        "meio": "out/panda_direcao_r3/19-fibra-no-residuo_meio.jpg",
+        "fim": "out/panda_direcao_r3/19-fibra-no-residuo_fim.jpg"
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "20-trabalho-duplo",
@@ -223,7 +337,13 @@
         "inicio": 1236,
         "meio": 1269,
         "fim": 1302
-      }
+      },
+      "evidencias": {
+        "inicio": "out/panda_direcao_r3/20-trabalho-duplo_inicio.jpg",
+        "meio": "out/panda_direcao_r3/20-trabalho-duplo_meio.jpg",
+        "fim": "out/panda_direcao_r3/20-trabalho-duplo_fim.jpg"
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "21-come-muito",
@@ -234,7 +354,13 @@
         "inicio": 1303,
         "meio": 1350,
         "fim": 1397
-      }
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/21-come-muito_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "22-metade-do-dia",
@@ -245,7 +371,13 @@
         "inicio": 1398,
         "meio": 1410,
         "fim": 1423
-      }
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/22-metade-do-dia_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "23-procura-na-pilha",
@@ -256,7 +388,13 @@
         "inicio": 1424,
         "meio": 1479,
         "fim": 1535
-      }
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/23-procura-na-pilha_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "24-pega-outro-colmo",
@@ -267,7 +405,13 @@
         "inicio": 1536,
         "meio": 1558,
         "fim": 1582
-      }
+      },
+      "evidencias": {
+        "inicio": "out/panda_direcao_r3/24-pega-outro-colmo_inicio.jpg",
+        "meio": "out/panda_direcao_r3/24-pega-outro-colmo_meio.jpg",
+        "fim": "out/panda_direcao_r3/24-pega-outro-colmo_fim.jpg"
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "25-almoco-expediente",
@@ -278,7 +422,13 @@
         "inicio": 1583,
         "meio": 1597,
         "fim": 1611
-      }
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/25-almoco-expediente_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "26-repouso-no-tronco",
@@ -289,7 +439,13 @@
         "inicio": 1612,
         "meio": 1672,
         "fim": 1733
-      }
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/26-repouso-no-tronco_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "27-repouso-dejeto-novo",
@@ -300,7 +456,13 @@
         "inicio": 1734,
         "meio": 1762,
         "fim": 1791
-      }
+      },
+      "evidencias": {
+        "inicio": "out/panda_direcao_r3/27-repouso-dejeto-novo_inicio.jpg",
+        "meio": "out/panda_direcao_r3/27-repouso-dejeto-novo_meio.jpg",
+        "fim": "out/panda_direcao_r3/27-repouso-dejeto-novo_fim.jpg"
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "28-boca-fecha-servico-segue",
@@ -311,7 +473,13 @@
         "inicio": 1792,
         "meio": 1810,
         "fim": 1830
-      }
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/28-boca-fecha-servico-segue_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "29-cardapio-local",
@@ -322,7 +490,13 @@
         "inicio": 1831,
         "meio": 1881,
         "fim": 1931
-      }
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/29-cardapio-local_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "30-especie-da-mancha",
@@ -333,7 +507,13 @@
         "inicio": 1932,
         "meio": 1943,
         "fim": 1955
-      }
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/30-especie-da-mancha_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "31-florescer-na-regiao",
@@ -344,7 +524,13 @@
         "inicio": 1956,
         "meio": 1972,
         "fim": 1989
-      }
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/31-florescer-na-regiao_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "32-mancha-seca",
@@ -355,7 +541,13 @@
         "inicio": 1990,
         "meio": 2044,
         "fim": 2100
-      }
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/32-mancha-seca_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "33-procura-outro-lugar",
@@ -366,7 +558,13 @@
         "inicio": 2101,
         "meio": 2136,
         "fim": 2171
-      }
+      },
+      "evidencias": {
+        "inicio": "out/panda_direcao_r3/33-procura-outro-lugar_inicio.jpg",
+        "meio": "out/panda_direcao_r3/33-procura-outro-lugar_meio.jpg",
+        "fim": "out/panda_direcao_r3/33-procura-outro-lugar_fim.jpg"
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "34-chega-ao-verde",
@@ -377,7 +575,13 @@
         "inicio": 2172,
         "meio": 2202,
         "fim": 2234
-      }
+      },
+      "evidencias": {
+        "inicio": "out/panda_direcao_r3/34-chega-ao-verde_inicio.jpg",
+        "meio": "out/panda_direcao_r3/34-chega-ao-verde_meio.jpg",
+        "fim": "out/panda_direcao_r3/34-chega-ao-verde_fim.jpg"
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "35-recap-polegar",
@@ -388,7 +592,13 @@
         "inicio": 2235,
         "meio": 2252,
         "fim": 2271
-      }
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/35-recap-polegar_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "36-recap-mandibula",
@@ -399,7 +609,13 @@
         "inicio": 2272,
         "meio": 2307,
         "fim": 2342
-      }
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/36-recap-mandibula_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "37-recap-dia-comida",
@@ -410,7 +626,13 @@
         "inicio": 2343,
         "meio": 2364,
         "fim": 2386
-      }
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/37-recap-dia-comida_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "38-reencontra-mordida",
@@ -421,7 +643,13 @@
         "inicio": 2387,
         "meio": 2441,
         "fim": 2496
-      }
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/38-reencontra-mordida_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     },
     {
       "id": "39-loop-exato",
@@ -432,7 +660,53 @@
         "inicio": 2497,
         "meio": 2528,
         "fim": 2560
-      }
+      },
+      "evidencias": {
+        "inicio": null,
+        "meio": "out/panda_direcao_r3/39-loop-exato_meio.jpg",
+        "fim": null
+      },
+      "quadroCentralInspecionado": true
     }
-  ]
+  ],
+  "verificacao": {
+    "typecheck": "passou",
+    "planosContiguos": true,
+    "menorPlanoSegundos": 0.6890000000000001,
+    "esquemas": [
+      {
+        "id": "05-intestino-ancestral",
+        "segundos": 1.745
+      },
+      {
+        "id": "09-osso-do-punho",
+        "segundos": 1.6600000000000001
+      },
+      {
+        "id": "15-molares-e-musculos",
+        "segundos": 2.5199999999999996
+      },
+      {
+        "id": "18-nutrientes-e-fibra",
+        "segundos": 2.780000000000001
+      }
+    ],
+    "loop": {
+      "primeiro": "out/panda_direcao_r3/loop_0.png",
+      "ultimo": "out/panda_direcao_r3/loop_2560.png",
+      "regiaoComparadaEm1080x1920": {
+        "x": 0,
+        "y": 480,
+        "width": 1080,
+        "height": 1440
+      },
+      "diferencaMediaRGB": [
+        0,
+        0,
+        0
+      ]
+    },
+    "capa": "out/capa_panda.png",
+    "qaIntegralMP4": false
+  }
 }

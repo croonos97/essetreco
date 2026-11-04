@@ -5,7 +5,7 @@ import {Clouds, rnd, SkyDome} from '../../World';
 type V3 = [number, number, number];
 type Instance = {p: V3; s: V3; color: string; r?: V3};
 const clamp = (n: number) => Math.max(0, Math.min(1, n));
-const green = new THREE.Color('#618c33'), straw = new THREE.Color('#b69a55');
+const green = new THREE.Color('#618c33'), straw = new THREE.Color('#c6a04b');
 const shade = (a: string, b: string, t: number) => new THREE.Color(a).lerp(new THREE.Color(b), clamp(t)).getStyle();
 
 function leafGeometry() {
@@ -61,7 +61,7 @@ function bambooData(height:number,radius:number,dry:number,leaves:boolean,seed=0
   const steps=Math.max(2,Math.ceil(height/.63));
   for(let j=1;j<steps;j++) {
     const y=j*height/steps, angle=j*2.399+seed;
-    put(nodes,[0,y,0],[radius*1.04,radius*1.04,radius*.53],shade('#a1b46c','#b4a071',dry),[Math.PI/2,0,0]);
+    put(nodes,[0,y,0],[radius*1.04,radius*1.04,radius*.53],shade('#a1b46c','#d4ba77',dry),[Math.PI/2,0,0]);
     if(j<steps*.34 || !leaves) continue;
     const length=.38+rnd(j,seed+1)*.47;
     const end:V3=[Math.cos(angle)*length,y+.18,Math.sin(angle)*length];
@@ -72,11 +72,11 @@ function bambooData(height:number,radius:number,dry:number,leaves:boolean,seed=0
       const f=.23+k/12;
       const p:V3=[end[0]*f,y+.18*f,end[2]*f];
       const a=angle+(k%2?1:-1)*(.45+rnd(k,seed)*.9);
-      put(blades,p,[.6+rnd(k,3)*.35,1,.75+rnd(k,4)*.55],shade(['#668c38','#407041','#83a34b'][k%3],'#bb9e58',dry),[.1+rnd(k,5)*.5,a,(rnd(k,6)-.5)*.3]);
+      put(blades,p,[.6+rnd(k,3)*.35,1,.75+rnd(k,4)*.55],shade(['#668c38','#407041','#83a34b'][k%3],'#b68a39',dry),[.1+rnd(k,5)*.5,a,(rnd(k,6)-.5)*.3]);
     }
-    if(dry>.08) for(let k=0;k<5;k++) {
-      const f=k/5;
-      put(flowers,[end[0]*(.7+f*.4),end[1]+.07+f*.12,end[2]*(.7+f*.4)],[.018,.035+f*.01,.018],shade('#b3b86d','#aa8851',dry));
+    if(dry>.08) for(let k=0;k<15;k++) {
+      const f=(k%5)/4, fork=Math.floor(k/5)-1, spread=fork*(.045+f*.035);
+      put(flowers,[end[0]*(.8+f*.35)+Math.cos(angle+Math.PI/2)*spread,end[1]+.05+f*.23,end[2]*(.8+f*.35)+Math.sin(angle+Math.PI/2)*spread],[.026,.045,.026],shade('#d3bf79','#c29b54',dry));
     }
   }
   return {stems,nodes,blades,flowers};
@@ -89,6 +89,12 @@ export function ColmoBambu({height=2,radius=.045,dry=0,leaves=true}: {height?:nu
 }
 
 const trailX=(z:number)=>Math.max(0,-z)*.54+Math.sin(z*.45)*.28;
+function arrivalClear(x:number,z:number) {
+  const dx=2.7-1.4,dz=-4.8+1.2;
+  const f=clamp(((x-1.4)*dx+(z+1.2)*dz)/(dx*dx+dz*dz));
+  // Clear the destination and the camera-to-panda sightline, including leaf reach.
+  return Math.hypot(x-2.7,z+4.8)<2.1 || Math.hypot(x-(1.4+f*dx),z-(-1.2+f*dz))<1.6;
+}
 function groundY(x:number,z:number) {
   const distance=Math.hypot(x,z);
   const hills=Math.max(0,Math.min(1,(distance-4)/12));
@@ -115,7 +121,7 @@ function forestData(season:number,localOnly=false) {
   for(let i=0;i<360;i++) {
     const a=rnd(i,19)*Math.PI*2, distance=i<120?2.7+Math.sqrt(rnd(i,20))*8:7+Math.sqrt(rnd(i,20))*16;
     const x=Math.cos(a)*distance,z=Math.sin(a)*distance-2;
-    if(Math.hypot(x,z)<2.25 || (z>0&&Math.abs(x)<10) || (z<1&&z>-8&&Math.abs(x-trailX(z))<1.05) || Math.abs(z+10-Math.sin(x*.26)*1.3)<1.1) continue;
+    if(Math.hypot(x,z)<2.25 || (z>0&&Math.abs(x)<10) || arrivalClear(x,z) || (z<1&&z>-8&&Math.abs(x-trailX(z))<1.05) || Math.abs(z+10-Math.sin(x*.26)*1.3)<1.1) continue;
     const height=4.2+rnd(i,21)*4.9, radius=.04+rnd(i,22)*.04;
     const local=x<-1.6&&z>-4.5&&z<4.5;
     if(local!==localOnly) continue;
@@ -130,7 +136,7 @@ function understory() {
   const rocks:Instance[]=[], moss:Instance[]=[],leaves:Instance[]=[], flowers:Instance[]=[],stems:Instance[]=[];
   for(let i=0;i<90;i++) {
     const a=rnd(i,61)*Math.PI*2, d=2.4+rnd(i,62)*17,x=Math.cos(a)*d,z=Math.sin(a)*d-3;
-    if(Math.abs(x-trailX(z))<.9) continue;
+    if(Math.abs(x-trailX(z))<.9 || arrivalClear(x,z)) continue;
     const s=.13+rnd(i,63)*.65,y=groundY(x,z);
     put(rocks,[x,y+s*.27,z],[s,s*(.4+rnd(i,64)*.4),s*(.6+rnd(i,68)*.7)],['#7b8072','#8b8d7a','#697663'][i%3],[rnd(i,65),rnd(i,66),rnd(i,67)]);
     put(moss,[x,y+s*.82,z],[s*.8,.075,s*.65],'#688346');
