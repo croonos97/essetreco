@@ -1,5 +1,7 @@
 # Panda — ajuste de gancho v2
 
+**Substituído pela v3 em 04/11/2026.** A tomada Drama-3 abaixo foi removida do MP4 final porque o usuário escolheu manter a voz do canal em toda a locução.
+
 O usuário pediu mais ênfase em “Você cai de boca no bambu”.
 
 - Voz: Fish `tiktok curiosidades` (`7344de0f70a84483975a5163f2a21837`)

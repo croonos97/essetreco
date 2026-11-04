@@ -1,6 +1,6 @@
 {
   "video": "panda",
-  "status": "MP4 v2 entregue: gancho de voz enfatizado; QA visual anterior permanece válido porque os quadros não mudaram",
+  "status": "MP4 v3 entregue: locução inteira voltou ao perfil de voz do canal; QA visual anterior permanece válido porque os quadros não mudaram",
   "gancho_usuario": "Você cai de boca no bambu.",
   "roteiro": "roteiros/panda.json",
   "storyboard": "docs/panda/ROTEIRO_V1.md",
@@ -19,9 +19,9 @@
   "voz_gerada": true,
   "render_iniciado": true,
   "aprovacao_usuario": "pode dale —03/11/2026",
-  "narracao": "docs/panda/NARRACAO_FISH.json; gancho v2 Fish Drama-3 task 3fd74dbe6e9d417da2b403322e11d0ad",
-  "checagem_voz": "9cenas originais conferidas por ASR sem roteiro;similaridade>=.994. Gancho v2 preserva o mesmo texto, com interpretação forceful e duração reencaixada em1,729s",
+  "narracao": "docs/panda/NARRACAO_FISH.json; v3 restaura as nove cenas S2.1-Pro do perfil do canal",
+  "checagem_voz": "9cenas conferidas por ASR sem roteiro;similaridade>=.994. A tomada experimental Drama-3 do gancho foi removida",
   "render_teste": "https://github.com/croonos97/essetreco/actions/runs/41714077533",
   "render_final": "https://github.com/croonos97/essetreco/actions/runs/41757701804",
-  "qa_relatorio": "docs/panda/QA_FINAL.md; alteração v2 é apenas áudio, sem mudança em quadros ou planos"
+  "qa_relatorio": "docs/panda/QA_FINAL.md; v3 altera somente a faixa de áudio, sem mudança em quadros ou planos"
 }
