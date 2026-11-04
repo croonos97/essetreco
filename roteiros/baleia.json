@@ -1,0 +1,92 @@
+{
+  "id": "baleia",
+  "titulo": "Você mama até debaixo d’água.",
+  "status": "APROVADO pelo usuário; produção e narração autorizadas",
+  "species": "Megaptera novaeangliae",
+  "cenas": [
+    {
+      "id": "gancho",
+      "label": "Gancho e revelação (estimativa0–7s)",
+      "text": "Você mama até debaixo d’água. Você é um filhote de baleia-jubarte. E pra você, isso é almoço.",
+      "visual": "Primeiro quadro: mãe e filhote reconhecíveis de perfil em três quartos, já em contato de amamentação; câmera em deslocamento suave, superfície iluminada acima. Nada de tela vazia ou título antes do animal. Boca do filhote encosta na região mamária ventral posterior da mãe. Gancho grande em duas linhas no alto, sem cobrir contato. Abrir discretamente o enquadramento na identificação. Pequeno resíduo de leite só ao soltar o contato, não um jato atravessando água até uma boca distante.",
+      "keywords": [
+        "mama",
+        "d’água",
+        "jubarte"
+      ],
+      "audio": "01.mp3"
+    },
+    {
+      "id": "mama",
+      "label": "Onde está a mama? (7–17s)",
+      "text": "Só que sua mãe não tem um peito pendurado. Os mamilos ficam recolhidos em fendas na barriga. Você chega por baixo e encosta a boca ali. É seu ponto de abastecimento.",
+      "visual": "Continuar a aproximação, sem teletransporte: lateral → ventral oblíqua → detalhe localizado. Mostrar duas fendas mamárias ao lado da fenda genital, região posterior; distinguir a abertura genital, nunca fazer o leite sair dela. Glândulas internas; sem seios humanos ou úbere bovino. Apelido ABASTECIMENTO aparece depois do contato. Não desenhar mapa interno de ductos sem referência anatômica suficiente.",
+      "keywords": [
+        "mamilos",
+        "fendas",
+        "abastecimento"
+      ],
+      "audio": "02.mp3"
+    },
+    {
+      "id": "leite",
+      "label": "Leite concentrado (17–28s)",
+      "text": "E o leite vem reforçado: pode ter mais da metade da composição em gordura. Você tá começando a vida com um combustível que ajuda a crescer e formar sua camada de gordura.",
+      "visual": "Detalhe didático do leite com marcador GORDURA · PODE PASSAR DE50%, explicitamente variável. Corte rápido ao corpo do mesmo filhote com uma faixa subcutânea destacada, sem inflar instantaneamente. Crescimento apenas em passagem de tempo identificada, nunca resultado de um único gole. Manter pele realista e sólidos opacos no oceano.",
+      "keywords": [
+        "gordura",
+        "crescer",
+        "camada"
+      ],
+      "audio": "03.mp3"
+    },
+    {
+      "id": "respirar",
+      "label": "A mamada tem intervalo (28–41s)",
+      "text": "Mas seu almoço tem intervalo obrigatório. Você larga a mamada e sobe pra respirar pelos orifícios no alto da cabeça. Respirou? Mergulha e volta pro leite.",
+      "visual": "Soltar boca, girar corpo, bater cauda verticalmente e subir em trajeto contínuo. Câmera acompanha até a interface água/ar; a mãe permanece visível abaixo. Mostrar os DOIS espiráculos da jubarte fechados sob água e abrindo acima. Expiração em névoa curta, sem chafariz de água vindo do estômago. Nunca abrir a boca para respirar.\n\nFechar a mesma cena com detalhe dos espiráculos → vista lateral da descida → retorno ao mesmo lado da mãe. O filhote não tem brânquias. Um ícone discreto AR entra apenas na superfície. Não cortar por dentro da garganta nem inventar uma válvula. Não usar contagem regressiva ou sugerir um intervalo respiratório universal.",
+      "keywords": [
+        "respirar",
+        "cabeça",
+        "Mergulha"
+      ],
+      "audio": "04.mp3"
+    },
+    {
+      "id": "reserva",
+      "label": "A conta fica com a mãe (41–55s)",
+      "text": "Enquanto você toma leite, sua mãe pode passar longos períodos sem comer na temporada de reprodução. Quem sustenta seu almoço é a gordura que ela juntou antes. Você cresce. Ela paga do próprio corpo.",
+      "visual": "Enquanto a dupla nada lentamente, transição identificada ANTES mostra a mesma mãe alimentando-se em água fria, com peixes/krill e boca própria de baleia de barbatanas. Retornar AGORA à amamentação em água tropical. Reserva corporal em destaque simples reduz gradualmente em passagem de tempo. Não mostrar emagrecimento extremo nem dizer que toda jubarte passa toda lactação sem comer. Apelido RESERVA DA MÃE.",
+      "keywords": [
+        "comer",
+        "gordura",
+        "corpo"
+      ],
+      "audio": "05.mp3"
+    },
+    {
+      "id": "viagem",
+      "label": "Para que tudo isso? (55–66s)",
+      "text": "Você precisa crescer pra acompanhar sua mãe até as águas onde ela busca comida. E pode continuar mamando durante essa viagem. Seu leite vai junto.",
+      "visual": "Plano amplo da dupla iniciando deslocamento; representação de rota estilizada sem distância inventada nem cruzar continentes. Mesmo filhote com progressão temporal explícita. Não mostrar desmame instantâneo, filhote recém-nascido caçando ou orcas surgindo só para criar suspense.",
+      "keywords": [
+        "crescer",
+        "viagem",
+        "leite"
+      ],
+      "audio": "06.mp3"
+    },
+    {
+      "id": "loop",
+      "label": "Retorno ao gancho (66–73s)",
+      "text": "Mergulha, mama, sobe pra respirar. Seu primeiro trabalho é esse. Você mama até debaixo d’água.",
+      "visual": "Três cortes breves recuperam ações já demonstradas, preservando movimento da dupla. Encerrar com aproximação do filhote à mama, compatível com o primeiro quadro. Sem cartaz de recap, pedido falado de seguir ou nova curiosidade no fim. Não garantir loop acústico antes da gravação.",
+      "keywords": [
+        "Mergulha",
+        "mama",
+        "respirar"
+      ],
+      "audio": "07.mp3"
+    }
+  ]
+}

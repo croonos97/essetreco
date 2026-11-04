@@ -1,0 +1,23 @@
+[
+  {
+    "kind": "surface_water",
+    "t": 37.381,
+    "duration": 0.7,
+    "gain": 0.075,
+    "synthesized": true
+  },
+  {
+    "kind": "underwater_current",
+    "t": 38.261,
+    "duration": 1,
+    "gain": 0.045,
+    "synthesized": true
+  },
+  {
+    "kind": "underwater_current",
+    "t": 64.26599999999999,
+    "duration": 0.7,
+    "gain": 0.035,
+    "synthesized": true
+  }
+]

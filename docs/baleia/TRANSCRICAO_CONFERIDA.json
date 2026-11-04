@@ -1,0 +1,59 @@
+{
+  "metodo": "faster-whisper small CPU int8, sem initial_prompt; comparação normalizada; não equivale a escuta humana",
+  "cenas": [
+    {
+      "cena": 1,
+      "esperado": "Você mama até debaixo d’água. Você é um filhote de baleia-jubarte. E pra você, isso é almoço.",
+      "ouvido": "Você ama até debaixo d'água. Você é um filhote de baleia jubarte. E pra você, isso é almoço.",
+      "similaridade": 0.9885057471264368,
+      "sem_prompt": true
+    },
+    {
+      "cena": 2,
+      "esperado": "Só que sua mãe não tem um peito pendurado. Os mamilos ficam recolhidos em fendas na barriga. Você chega por baixo e encosta a boca ali. É seu ponto de abastecimento.",
+      "ouvido": "Só que sua mãe não tem um peito pendurado. Os mamilos ficam recolhidos em fendas na barriga. Você chega por baixo e encosta a boca ali. É seu ponto de abastecimento.",
+      "similaridade": 1.0,
+      "sem_prompt": true
+    },
+    {
+      "cena": 3,
+      "esperado": "E o leite vem reforçado: pode ter mais da metade da composição em gordura. Você tá começando a vida com um combustível que ajuda a crescer e formar sua camada de gordura.",
+      "ouvido": "E o leite vem reforçado. Pode ter mais da metade da composição em gordura. Você tá começando a vida com um combustível que ajuda a crescer e formar sua camada de gordura.",
+      "similaridade": 1.0,
+      "sem_prompt": true
+    },
+    {
+      "cena": 4,
+      "esperado": "Mas seu almoço tem intervalo obrigatório. Você larga a mamada e sobe pra respirar pelos orifícios no alto da cabeça. Respirou? Mergulha e volta pro leite.",
+      "ouvido": "Mas seu almoço tem intervalo obrigatório. Você larga a mamada e sobe para respirar pelos orifícios no alto da cabeça. Respirou? Mergulha e volta para o leite.",
+      "similaridade": 0.9868421052631579,
+      "sem_prompt": true
+    },
+    {
+      "cena": 5,
+      "esperado": "Enquanto você toma leite, sua mãe pode passar longos períodos sem comer na temporada de reprodução. Quem sustenta seu almoço é a gordura que ela juntou antes. Você cresce. Ela paga do próprio corpo.",
+      "ouvido": "Enquanto você toma leite, sua mãe pode passar longos períodos sem comer na temporada de reprodução. Quem sustenta seu almoço é a gordura que ela juntou antes. Você cresce, ela apaga do próprio corpo.",
+      "similaridade": 0.9974160206718347,
+      "sem_prompt": true
+    },
+    {
+      "cena": 6,
+      "esperado": "Você precisa crescer pra acompanhar sua mãe até as águas onde ela busca comida. E pode continuar mamando durante essa viagem. Seu leite vai junto.",
+      "ouvido": "Você precisa crescer para acompanhar sua mãe até as águas onde ela busca comida e pode continuar mamando durante essa viagem. Seu leite vai junto.",
+      "similaridade": 0.9965156794425087,
+      "sem_prompt": true
+    },
+    {
+      "cena": 7,
+      "esperado": "Mergulha, mama, sobe pra respirar. Seu primeiro trabalho é esse. Você mama até debaixo d’água.",
+      "ouvido": "Mergulha, mama. Sobe pra respirar. Seu primeiro trabalho é esse. Você mama até debaixo d'água.",
+      "similaridade": 1.0,
+      "sem_prompt": true
+    }
+  ],
+  "divergencias_asr": {
+    "cena1": "small: ama; base: mama, sem prompt",
+    "cena5": "small: apaga; base: paga, sem prompt"
+  },
+  "segundo_modelo": "TRANSCRICAO_SEGUNDO_ASR.json; segunda leitura independente reconheceu mama e paga; nenhuma tomada regenerada"
+}

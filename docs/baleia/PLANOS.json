@@ -1,0 +1,261 @@
+[
+  {
+    "id": "01-contato-primeiro-quadro",
+    "from": 0,
+    "to": 3.36,
+    "frames": {
+      "inicio": 0,
+      "meio": 50,
+      "fim": 100
+    }
+  },
+  {
+    "id": "02-filhote-revelado",
+    "from": 3.36,
+    "to": 7.797,
+    "frames": {
+      "inicio": 101,
+      "meio": 167,
+      "fim": 233
+    }
+  },
+  {
+    "id": "03-ventre-localizacao",
+    "from": 7.797,
+    "to": 10.437,
+    "frames": {
+      "inicio": 234,
+      "meio": 273,
+      "fim": 313
+    }
+  },
+  {
+    "id": "04-duas-fendas",
+    "from": 10.437,
+    "to": 13.677,
+    "note": "AMARELO: FENDAS MAMÁRIAS · AZUL: FENDA GENITAL",
+    "frames": {
+      "inicio": 314,
+      "meio": 361,
+      "fim": 410
+    }
+  },
+  {
+    "id": "05-aproxima-canto-boca",
+    "from": 13.677,
+    "to": 14.877,
+    "frames": {
+      "inicio": 411,
+      "meio": 428,
+      "fim": 446
+    }
+  },
+  {
+    "id": "06-contato-abastecimento",
+    "from": 14.877,
+    "to": 18.404,
+    "frames": {
+      "inicio": 447,
+      "meio": 499,
+      "fim": 552
+    }
+  },
+  {
+    "id": "07-leite-concentrado",
+    "from": 18.404,
+    "to": 22.644,
+    "frames": {
+      "inicio": 553,
+      "meio": 615,
+      "fim": 679
+    }
+  },
+  {
+    "id": "08-camada-do-filhote",
+    "from": 22.644,
+    "to": 26.624,
+    "note": "DESTAQUE DIDÁTICO · CAMADA SUBCUTÂNEA",
+    "frames": {
+      "inicio": 680,
+      "meio": 739,
+      "fim": 798
+    }
+  },
+  {
+    "id": "09-crescimento-tempo",
+    "from": 26.624,
+    "to": 29.581,
+    "note": "CRESCIMENTO AO LONGO DO TEMPO",
+    "frames": {
+      "inicio": 799,
+      "meio": 843,
+      "fim": 887
+    }
+  },
+  {
+    "id": "10-solta-contato",
+    "from": 29.581,
+    "to": 33.921,
+    "frames": {
+      "inicio": 888,
+      "meio": 952,
+      "fim": 1017
+    }
+  },
+  {
+    "id": "11-subida-continua",
+    "from": 33.921,
+    "to": 35.241,
+    "frames": {
+      "inicio": 1018,
+      "meio": 1037,
+      "fim": 1057
+    }
+  },
+  {
+    "id": "12a-dois-espiraculos",
+    "from": 35.241,
+    "to": 36.45100000000001,
+    "note": "AR · DOIS ESPIRÁCULOS",
+    "frames": {
+      "inicio": 1058,
+      "meio": 1075,
+      "fim": 1093
+    }
+  },
+  {
+    "id": "12b-interface-ar-agua",
+    "from": 36.45100000000001,
+    "to": 38.261,
+    "note": "ESPIRÁCULOS ACIMA DA SUPERFÍCIE",
+    "frames": {
+      "inicio": 1094,
+      "meio": 1120,
+      "fim": 1147
+    }
+  },
+  {
+    "id": "13-desce-retorna",
+    "from": 38.261,
+    "to": 40.294,
+    "frames": {
+      "inicio": 1148,
+      "meio": 1178,
+      "fim": 1208
+    }
+  },
+  {
+    "id": "14a-custo-materno",
+    "from": 40.294,
+    "to": 43.654,
+    "frames": {
+      "inicio": 1209,
+      "meio": 1259,
+      "fim": 1309
+    }
+  },
+  {
+    "id": "14b-mae-sem-comer",
+    "from": 43.654,
+    "to": 46.994,
+    "frames": {
+      "inicio": 1310,
+      "meio": 1359,
+      "fim": 1409
+    }
+  },
+  {
+    "id": "15-antes-alimentacao",
+    "from": 46.994,
+    "to": 50.174,
+    "note": "ANTES · ÁGUAS DE ALIMENTAÇÃO",
+    "frames": {
+      "inicio": 1410,
+      "meio": 1457,
+      "fim": 1505
+    }
+  },
+  {
+    "id": "16-reserva-corporal",
+    "from": 50.174,
+    "to": 51.794,
+    "note": "AGORA · RESERVAS ACUMULADAS ANTES",
+    "frames": {
+      "inicio": 1506,
+      "meio": 1529,
+      "fim": 1553
+    }
+  },
+  {
+    "id": "17-mae-financia",
+    "from": 51.794,
+    "to": 54.795,
+    "note": "PASSAGEM DE TEMPO · RESERVA DA MÃE",
+    "frames": {
+      "inicio": 1554,
+      "meio": 1598,
+      "fim": 1643
+    }
+  },
+  {
+    "id": "18-rota-oceano",
+    "from": 54.795,
+    "to": 60.595,
+    "note": "MIGRAÇÃO · ROTA ILUSTRATIVA SEM ESCALA",
+    "frames": {
+      "inicio": 1644,
+      "meio": 1730,
+      "fim": 1817
+    }
+  },
+  {
+    "id": "19-leite-vai-junto",
+    "from": 60.595,
+    "to": 64.26599999999999,
+    "frames": {
+      "inicio": 1818,
+      "meio": 1872,
+      "fim": 1927
+    }
+  },
+  {
+    "id": "20-loop-mergulho",
+    "from": 64.26599999999999,
+    "to": 64.926,
+    "frames": {
+      "inicio": 1928,
+      "meio": 1937,
+      "fim": 1947
+    }
+  },
+  {
+    "id": "21-loop-mamada",
+    "from": 64.926,
+    "to": 65.986,
+    "frames": {
+      "inicio": 1948,
+      "meio": 1963,
+      "fim": 1979
+    }
+  },
+  {
+    "id": "22-loop-respirar",
+    "from": 65.986,
+    "to": 67.026,
+    "frames": {
+      "inicio": 1980,
+      "meio": 1995,
+      "fim": 2010
+    }
+  },
+  {
+    "id": "23-volta-ao-gancho",
+    "from": 67.026,
+    "to": 71.4,
+    "frames": {
+      "inicio": 2011,
+      "meio": 2076,
+      "fim": 2141
+    }
+  }
+]

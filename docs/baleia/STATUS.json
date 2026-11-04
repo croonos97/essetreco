@@ -1,0 +1,13 @@
+{
+  "video": "baleia",
+  "status": "PRODUCAO_AUTORIZADA_EM_ANDAMENTO",
+  "roteiro_aprovado_usuario": true,
+  "data": "2026-11-04",
+  "gancho": "Você mama até debaixo d’água.",
+  "diretor": "baleia_diretor",
+  "operador_audio": "baleia_audio",
+  "voz_referencia": "https://s.fish.audio/m4g4r2",
+  "modelo": "drama-3",
+  "render_final": null,
+  "qa_final": "pendente"
+}

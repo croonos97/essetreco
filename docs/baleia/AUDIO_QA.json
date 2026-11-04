@@ -1,0 +1,17 @@
+{
+  "voice": "Fish tiktok curiosidades Drama3, sete tomadas recebidas",
+  "changes": "trim de silêncio periférico, normalização por cena e mix, sem alteração da velocidade",
+  "mix": "public/baleia/mix.wav",
+  "duration": 71.4,
+  "fps": 30,
+  "frames": 2142,
+  "voice_offset": 0.5,
+  "tail_min": 0.4,
+  "loudness_integrated_lufs": -14.53,
+  "true_peak_dbtp": -1.2,
+  "loudness_range_lu": 1.7,
+  "music": "original sintetizada; cama harmônica D menor e ruído oceânico filtrado com ducking",
+  "effects": "água na superfície e nos dois mergulhos; sem gemidos, sem respiração subaquática",
+  "asr": "small sem prompt + base sem prompt nas duas divergências; ver relatórios",
+  "human_listening": false
+}

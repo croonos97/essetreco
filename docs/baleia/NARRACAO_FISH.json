@@ -1,0 +1,112 @@
+{
+  "voice_id": "7344de0f70a84483975a5163f2a21837",
+  "model": "drama-3",
+  "reference": "https://s.fish.audio/m4g4r2",
+  "scenes": [
+    {
+      "scene": 1,
+      "text": "Você mama até debaixo d’água. Você é um filhote de baleia-jubarte. E pra você, isso é almoço.",
+      "result": {
+        "task_id": "f703d14e9f094d5693c855548e2434db",
+        "audio_url": "https://platform.r2.fish.audio/tasks/2026-11-04/f703d14e9f094d5693c855548e2434db.mp3",
+        "voice": {
+          "id": "7344de0f70a84483975a5163f2a21837",
+          "title": "tiktok curiosidades"
+        },
+        "model": "drama-3",
+        "credits_charged": 103,
+        "next_action": "If the download of audio_url fails here, you may retry the download, for example after network access to *.fish.audio is allowed, or give the user the audio_url link to open in a browser. The link stays valid. Do not call text_to_speech again for the same text to get the file: that charges the user again."
+      }
+    },
+    {
+      "scene": 2,
+      "text": "Só que sua mãe não tem um peito pendurado. Os mamilos ficam recolhidos em fendas na barriga. Você chega por baixo e encosta a boca ali. É seu ponto de abastecimento.",
+      "result": {
+        "task_id": "01a0e873c16047039469e6a7bb997fa8",
+        "audio_url": "https://platform.r2.fish.audio/tasks/2026-11-04/01a0e873c16047039469e6a7bb997fa8.mp3",
+        "voice": {
+          "id": "7344de0f70a84483975a5163f2a21837",
+          "title": "tiktok curiosidades"
+        },
+        "model": "drama-3",
+        "credits_charged": 170,
+        "next_action": "If the download of audio_url fails here, you may retry the download, for example after network access to *.fish.audio is allowed, or give the user the audio_url link to open in a browser. The link stays valid. Do not call text_to_speech again for the same text to get the file: that charges the user again."
+      }
+    },
+    {
+      "scene": 3,
+      "text": "E o leite vem reforçado: pode ter mais da metade da composição em gordura. Você tá começando a vida com um combustível que ajuda a crescer e formar sua camada de gordura.",
+      "result": {
+        "task_id": "a03bcc782d70491093f8c974f915ec55",
+        "audio_url": "https://platform.r2.fish.audio/tasks/2026-11-04/a03bcc782d70491093f8c974f915ec55.mp3",
+        "voice": {
+          "id": "7344de0f70a84483975a5163f2a21837",
+          "title": "tiktok curiosidades"
+        },
+        "model": "drama-3",
+        "credits_charged": 177,
+        "next_action": "If the download of audio_url fails here, you may retry the download, for example after network access to *.fish.audio is allowed, or give the user the audio_url link to open in a browser. The link stays valid. Do not call text_to_speech again for the same text to get the file: that charges the user again."
+      }
+    },
+    {
+      "scene": 4,
+      "text": "Mas seu almoço tem intervalo obrigatório. Você larga a mamada e sobe pra respirar pelos orifícios no alto da cabeça. Respirou? Mergulha e volta pro leite.",
+      "result": {
+        "task_id": "f1b1c23dca0641ea91dfb2874d4cad9f",
+        "audio_url": "https://platform.r2.fish.audio/tasks/2026-11-04/f1b1c23dca0641ea91dfb2874d4cad9f.mp3",
+        "voice": {
+          "id": "7344de0f70a84483975a5163f2a21837",
+          "title": "tiktok curiosidades"
+        },
+        "model": "drama-3",
+        "credits_charged": 159,
+        "next_action": "If the download of audio_url fails here, you may retry the download, for example after network access to *.fish.audio is allowed, or give the user the audio_url link to open in a browser. The link stays valid. Do not call text_to_speech again for the same text to get the file: that charges the user again."
+      }
+    },
+    {
+      "scene": 5,
+      "text": "Enquanto você toma leite, sua mãe pode passar longos períodos sem comer na temporada de reprodução. Quem sustenta seu almoço é a gordura que ela juntou antes. Você cresce. Ela paga do próprio corpo.",
+      "result": {
+        "task_id": "c9c727b747154f4e83b8fc8af0501e52",
+        "audio_url": "https://platform.r2.fish.audio/tasks/2026-11-04/c9c727b747154f4e83b8fc8af0501e52.mp3",
+        "voice": {
+          "id": "7344de0f70a84483975a5163f2a21837",
+          "title": "tiktok curiosidades"
+        },
+        "model": "drama-3",
+        "credits_charged": 207,
+        "next_action": "If the download of audio_url fails here, you may retry the download, for example after network access to *.fish.audio is allowed, or give the user the audio_url link to open in a browser. The link stays valid. Do not call text_to_speech again for the same text to get the file: that charges the user again."
+      }
+    },
+    {
+      "scene": 6,
+      "text": "Você precisa crescer pra acompanhar sua mãe até as águas onde ela busca comida. E pode continuar mamando durante essa viagem. Seu leite vai junto.",
+      "result": {
+        "task_id": "e40b09cb35664132964400c29439f8a9",
+        "audio_url": "https://platform.r2.fish.audio/tasks/2026-11-04/e40b09cb35664132964400c29439f8a9.mp3",
+        "voice": {
+          "id": "7344de0f70a84483975a5163f2a21837",
+          "title": "tiktok curiosidades"
+        },
+        "model": "drama-3",
+        "credits_charged": 150,
+        "next_action": "If the download of audio_url fails here, you may retry the download, for example after network access to *.fish.audio is allowed, or give the user the audio_url link to open in a browser. The link stays valid. Do not call text_to_speech again for the same text to get the file: that charges the user again."
+      }
+    },
+    {
+      "scene": 7,
+      "text": "Mergulha, mama, sobe pra respirar. Seu primeiro trabalho é esse. Você mama até debaixo d’água.",
+      "result": {
+        "task_id": "d925862f8cd444cc8e34c347a04f5ac6",
+        "audio_url": "https://platform.r2.fish.audio/tasks/2026-11-04/d925862f8cd444cc8e34c347a04f5ac6.mp3",
+        "voice": {
+          "id": "7344de0f70a84483975a5163f2a21837",
+          "title": "tiktok curiosidades"
+        },
+        "model": "drama-3",
+        "credits_charged": 100,
+        "next_action": "If the download of audio_url fails here, you may retry the download, for example after network access to *.fish.audio is allowed, or give the user the audio_url link to open in a browser. The link stays valid. Do not call text_to_speech again for the same text to get the file: that charges the user again."
+      }
+    }
+  ]
+}
