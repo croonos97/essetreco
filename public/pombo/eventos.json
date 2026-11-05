@@ -1,0 +1,230 @@
+[
+ {
+  "kind": "whoosh",
+  "t": 1.952,
+  "lead": -0.25,
+  "gain": 0.55
+ },
+ {
+  "kind": "pop",
+  "t": 2.432,
+  "gain": 0.7
+ },
+ {
+  "kind": "pop",
+  "t": 4.952,
+  "gain": 0.7
+ },
+ {
+  "kind": "whoosh",
+  "t": 6.482,
+  "lead": -0.25,
+  "gain": 0.55
+ },
+ {
+  "kind": "pop",
+  "t": 6.622,
+  "gain": 0.7
+ },
+ {
+  "kind": "pop",
+  "t": 11.162,
+  "gain": 0.7
+ },
+ {
+  "kind": "pop",
+  "t": 14.142,
+  "gain": 0.7
+ },
+ {
+  "kind": "whoosh",
+  "t": 15.31,
+  "lead": -0.25,
+  "gain": 0.55
+ },
+ {
+  "kind": "shiver",
+  "t": 16.33,
+  "gain": 0.7
+ },
+ {
+  "kind": "whoosh",
+  "t": 19.25,
+  "gain": 0.7
+ },
+ {
+  "kind": "shiver",
+  "t": 20.83,
+  "gain": 0.7
+ },
+ {
+  "kind": "whoosh",
+  "t": 22.25,
+  "gain": 0.7
+ },
+ {
+  "kind": "whoosh",
+  "t": 24.63,
+  "gain": 0.7
+ },
+ {
+  "kind": "whoosh",
+  "t": 25.45,
+  "gain": 0.7
+ },
+ {
+  "kind": "pop",
+  "t": 28.35,
+  "gain": 0.7
+ },
+ {
+  "kind": "whoosh",
+  "t": 29.434,
+  "lead": -0.25,
+  "gain": 0.55
+ },
+ {
+  "kind": "ok",
+  "t": 32.714,
+  "gain": 0.7
+ },
+ {
+  "kind": "pop",
+  "t": 35.054,
+  "gain": 0.7
+ },
+ {
+  "kind": "pop",
+  "t": 35.994,
+  "gain": 0.7
+ },
+ {
+  "kind": "crackle",
+  "t": 39.594,
+  "gain": 0.7
+ },
+ {
+  "kind": "pop",
+  "t": 42.514,
+  "gain": 0.7
+ },
+ {
+  "kind": "whoosh",
+  "t": 43.563,
+  "lead": -0.25,
+  "gain": 0.55
+ },
+ {
+  "kind": "pop",
+  "t": 43.903,
+  "gain": 0.7
+ },
+ {
+  "kind": "x",
+  "t": 45.543,
+  "gain": 0.7
+ },
+ {
+  "kind": "pop",
+  "t": 49.823,
+  "gain": 0.7
+ },
+ {
+  "kind": "pop",
+  "t": 51.763,
+  "gain": 0.7
+ },
+ {
+  "kind": "whoosh",
+  "t": 52.783,
+  "lead": -0.25,
+  "gain": 0.55
+ },
+ {
+  "kind": "whoosh",
+  "t": 53.123,
+  "gain": 0.7
+ },
+ {
+  "kind": "pop",
+  "t": 54.083,
+  "gain": 0.7
+ },
+ {
+  "kind": "whoosh",
+  "t": 59.523,
+  "gain": 0.7
+ },
+ {
+  "kind": "whoosh",
+  "t": 60.983,
+  "gain": 0.7
+ },
+ {
+  "kind": "pop",
+  "t": 65.903,
+  "gain": 0.7
+ },
+ {
+  "kind": "whoosh",
+  "t": 66.896,
+  "lead": -0.25,
+  "gain": 0.55
+ },
+ {
+  "kind": "x",
+  "t": 68.316,
+  "gain": 0.7
+ },
+ {
+  "kind": "ok",
+  "t": 69.936,
+  "gain": 0.7
+ },
+ {
+  "kind": "ok",
+  "t": 70.736,
+  "gain": 0.7
+ },
+ {
+  "kind": "pop",
+  "t": 74.216,
+  "gain": 0.7
+ },
+ {
+  "kind": "whoosh",
+  "t": 74.836,
+  "gain": 0.7
+ },
+ {
+  "kind": "riser",
+  "t": 75.847,
+  "gain": 0.6
+ },
+ {
+  "kind": "whoosh",
+  "t": 77.047,
+  "lead": -0.25,
+  "gain": 0.55
+ },
+ {
+  "kind": "pop",
+  "t": 78.667,
+  "gain": 0.7
+ },
+ {
+  "kind": "pop",
+  "t": 81.827,
+  "gain": 0.7
+ },
+ {
+  "kind": "whoosh",
+  "t": 83.847,
+  "gain": 0.7
+ },
+ {
+  "kind": "ok",
+  "t": 86.247,
+  "gain": 0.8
+ }
+]

@@ -1,0 +1,113 @@
+name: render
+run-name: render ${{ inputs.comp }} (${{ inputs.name }})
+
+on:
+  workflow_dispatch:
+    inputs:
+      entry:
+        description: "Entrada do Remotion"
+        default: "src/index.ts"
+      comp:
+        description: "ID da composição"
+        required: true
+      name:
+        description: "Pasta do vídeo em public/ (áudio)"
+        required: true
+      chunk:
+        description: "Quadros por bloco"
+        default: "150"
+      frames:
+        description: "Opcional: intervalo início-fim (teste)"
+        default: ""
+      props:
+        description: "Input props em JSON (opcional)"
+        default: ""
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      starts: ${{ steps.p.outputs.starts }}
+      total: ${{ steps.p.outputs.total }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with: { node-version: 22, cache: npm }
+      - run: npm ci --no-audit --no-fund
+      - id: p
+        env:
+          ENTRY: ${{ inputs.entry }}
+          COMP: ${{ inputs.comp }}
+          CHUNK: ${{ inputs.chunk }}
+          FRAMES: ${{ inputs.frames }}
+          PROPS: ${{ inputs.props }}
+        run: node tools/gh_plan.cjs
+
+  render:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        start: ${{ fromJson(needs.plan.outputs.starts) }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with: { node-version: 22, cache: npm }
+      - run: npm ci --no-audit --no-fund
+      - name: Render do bloco
+        env:
+          ENTRY: ${{ inputs.entry }}
+          COMP: ${{ inputs.comp }}
+          CHUNK: ${{ inputs.chunk }}
+          TOTAL: ${{ needs.plan.outputs.total }}
+          FRAMES: ${{ inputs.frames }}
+          PROPS: ${{ inputs.props }}
+          START: ${{ matrix.start }}
+        run: |
+          set -e
+          if [ -n "$FRAMES" ]; then LAST=${FRAMES#*-}; else LAST=$((TOTAL - 1)); fi
+          END=$((START + CHUNK - 1)); [ $END -gt $LAST ] && END=$LAST
+          ARGS=(); [ -n "$PROPS" ] && ARGS=(--props="$PROPS")
+          mkdir -p out
+          npx remotion render "$ENTRY" "$COMP" "out/$(printf %05d $START).mp4" \
+            --frames=$START-$END --gl=swangle --concurrency=$(nproc) --crf=16 --muted \
+            --timeout=300000 "${ARGS[@]}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: chunk-${{ matrix.start }}
+          path: out/*.mp4
+          retention-days: 1
+
+  join:
+    needs: render
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/download-artifact@v4
+        with: { pattern: "chunk-*", merge-multiple: true, path: out/chunks }
+      - name: Juntar blocos e áudio
+        env:
+          NAME: ${{ inputs.name }}
+        run: |
+          set -e
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg > /dev/null
+          ls out/chunks/*.mp4 | sort | sed "s|^|file '$PWD/|;s|$|'|" > list.txt
+          ffmpeg -v error -y -f concat -safe 0 -i list.txt -c copy out/video.mp4
+          if [ -f "public/$NAME/narracao.wav" ]; then
+            ffmpeg -v error -y -i "public/$NAME/narracao.wav" -i "public/$NAME/trilha.wav" -filter_complex "[0]aresample=48000[a];[1]aresample=48000,volume=0.9[b];[a][b]amix=inputs=2:normalize=0:duration=longest,alimiter=limit=0.95" -ar 48000 out/audio.wav
+            ffmpeg -v error -y -i out/video.mp4 -i out/audio.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 256k -shortest -movflags +faststart "out/${NAME}.mp4"
+          else
+            cp out/video.mp4 "out/${NAME}.mp4"
+          fi
+          ls -la out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: final
+          path: |
+            out/${{ inputs.name }}.mp4
+            out/video.mp4
+            out/audio.wav
+          retention-days: 1
